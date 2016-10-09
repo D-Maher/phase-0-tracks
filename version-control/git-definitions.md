@@ -13,3 +13,8 @@
 
 * What is a merge conflict?
     - A merge conflict occurs when Git notices that two branches that are trying to merge contain code that cannot be reconciled (e.g. two different developers making changes individually to the same line of code). Git usually can handle merges well, but merge conflicts occasionally occur despite this.
+
+
+
+
+Check out this lil fish!: >))>
