@@ -5,7 +5,7 @@
 </head>
 <body>
 <header>
-    <h1>My First HTML Tables!</h1>
+    <h1><u>My First HTML Tables!</u></h1>
 </header>
 <h2>Awesome Animals: The Table</h2>
 <p>Below is the first table I have ever made with HTML! It describes my top three favorite animals, their genus and species, and a cool fact about each.</p>
@@ -31,6 +31,24 @@
         <td>Has an elongated middle digit</td>
     </tr>
 </table>
+<p>
+    <br>
+    <br> <!-- I know this could done better with CSS, but for the sake of sticking to HTML... :) -->
+    <br>
+</p>
+<h2>Spanning: <strike>The Movie</strike> The Table</h2>
 <p>Now here is my second HTML table. It demonstrates the table cell attributes <code>rowspan</code> and <code>colspan</code>.</p>
+<table border="1">
+    <tr>
+        <td rowspan="2">ROWSPAN is 2</td>
+        <td>I'm in row 1, column 3</td>
+    </tr>
+    <tr>
+        <td>I'm in row 2, column 3</td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">COLSPAN is 2</td>
+    </tr>
+</table>
 </body>
 </html>
