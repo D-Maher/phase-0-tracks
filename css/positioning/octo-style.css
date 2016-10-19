@@ -1,18 +1,18 @@
 #glasses {
   display: block;
+  margin: auto;
   position: relative;
   top: 20.25em;
   left: .25em;
-  margin: auto;
   z-index: 2;
 }
 
 #hat {
   display: block;
+  margin: auto;
   position: relative;
   top: 7.5em;
   left: .8em;
-  margin: auto;
   z-index: 1;
 }
 
