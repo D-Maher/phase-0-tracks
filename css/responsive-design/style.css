@@ -32,9 +32,23 @@ figcaption {
 }
 
 
-/* BELOW HERE ARE MY ADDITIONS */
+/* v BELOW HERE ARE MY ADDITIONS v */
 
 
 body {
   width: 960px;
 }
+
+#external-links {
+  display: inline-block;
+  width: 200px;
+}
+
+main {
+  display: inline-block;
+  width: 756px
+}
+
+/*The width of '#external-links' and 'body' 
+shouldn't quite add up to 960px because of 
+a 'display' property "quirk".*/
