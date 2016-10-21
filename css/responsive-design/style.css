@@ -37,8 +37,9 @@ figcaption {
 
 body {
   max-width: 960px; 
+  min-width: 400px;
   /*'max-width' is more flexible, 
-  can adjust to be smaller with viewport */
+  can adjust to be smaller with viewport*/
 }
 
 #external-links {
