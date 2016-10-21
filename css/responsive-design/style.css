@@ -37,21 +37,27 @@ figcaption {
 
 body {
   max-width: 960px; 
-  /*'max-width' is more flexible, can adjust to be smaller with viewport */
+  /*'max-width' is more flexible, 
+  can adjust to be smaller with viewport */
 }
 
 #external-links {
   display: inline-block;
   vertical-align: top;
-  width: 200px;
+  width: 20%;
 }
 
 main {
   display: inline-block;
   vertical-align: top;
-  width: 756px
+  width: 70%;
+  padding-left: 5%;
 }
 
 /*The width of '#external-links' and 'body' 
-shouldn't quite add up to 960px because of 
-a 'display' property "quirk".*/
+shouldn't quite total up to 960px because of 
+a 'display' property "quirk". Similarly, the fluid widths 
+('% widths') shouldn't quite total up to 100%.*/
+
+/*An element with a width that is a % value means that that
+element will take up that % of the width of its parent element.*/
