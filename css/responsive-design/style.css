@@ -62,3 +62,12 @@ a 'display' property "quirk". Similarly, the fluid widths
 
 /*An element with a width that is a % value means that that
 element will take up that % of the width of its parent element.*/
+
+
+/*Media Queries*/
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: lightblue;
+  }
+}
