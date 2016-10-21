@@ -30,3 +30,87 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+
+/* v BELOW HERE ARE MY ADDITIONS v */
+
+
+body {
+  display: flex;
+  max-width: 1000px; 
+  min-width: 400px;
+  /*'max-width' is more flexible, 
+  can adjust to be smaller with viewport*/
+}
+
+#external-links {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+}
+
+div#wrap-main {
+  display: inline-block;
+  vertical-align: top;
+  width: 70%;
+  margin: 0 auto;
+}
+
+main {
+  display: block;
+  vertical-align: top;
+  width: 100%;
+}
+
+/*The width of '#external-links' and 'body' 
+shouldn't quite total up to 960px because of 
+a 'display' property "quirk". Similarly, the fluid widths 
+('% widths') shouldn't quite total up to 100%.*/
+
+/*An element with a width that is a % value means that that
+element will take up that % of the width of its parent element.*/
+
+
+/*Media Queries*/
+
+/*
+@media screen and (max-width: 500px) {
+  body {
+    background-color: lightblue;
+  }
+}
+*/
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: .75em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #external-links {
+    display: block;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+  }
+
+  #external-links ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #external-links h1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  div#wrap-main {
+    display: block;
+    position: absolute;
+    margin: auto;
+    margin-top: 100px;
+    width: 100%;
+    padding: 0;
+  }
+}
