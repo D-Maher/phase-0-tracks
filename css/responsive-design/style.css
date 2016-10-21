@@ -36,16 +36,19 @@ figcaption {
 
 
 body {
-  width: 960px;
+  max-width: 960px; 
+  /*'max-width' is more flexible, can adjust to be smaller with viewport */
 }
 
 #external-links {
   display: inline-block;
+  vertical-align: top;
   width: 200px;
 }
 
 main {
   display: inline-block;
+  vertical-align: top;
   width: 756px
 }
 
