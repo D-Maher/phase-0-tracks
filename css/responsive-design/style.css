@@ -66,8 +66,16 @@ element will take up that % of the width of its parent element.*/
 
 /*Media Queries*/
 
+/*
 @media screen and (max-width: 500px) {
   body {
     background-color: lightblue;
+  }
+}
+*/
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: .75em;
   }
 }
