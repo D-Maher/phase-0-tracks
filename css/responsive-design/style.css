@@ -79,3 +79,28 @@ element will take up that % of the width of its parent element.*/
     font-size: .75em;
   }
 }
+
+@media screen and (max-width: 500px) {
+  #external-links {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  #external-links ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  #external-links h1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  main {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+  }
+}
