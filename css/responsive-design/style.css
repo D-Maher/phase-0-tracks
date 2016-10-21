@@ -30,3 +30,11 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+
+/* BELOW HERE ARE MY ADDITIONS */
+
+
+body {
+  width: 960px;
+}
