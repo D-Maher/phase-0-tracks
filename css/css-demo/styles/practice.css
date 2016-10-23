@@ -12,3 +12,7 @@ section#contact-info {
 .duties {
   font-size: .8em;
 }
+
+section#work-experience li:nth-of-type(2) {
+  color: red;
+}
