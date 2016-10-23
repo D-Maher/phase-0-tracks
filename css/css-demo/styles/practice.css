@@ -16,3 +16,10 @@ section#contact-info {
 section#work-experience li:nth-of-type(2) {
   color: red;
 }
+
+section#contact-info p:hover:nth-of-type(2) {
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: green;
+}
