@@ -1,0 +1,25 @@
+section#contact-info {
+  font-size: .8em;
+}
+
+.job {
+  background-color: #e9e5dc;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.duties {
+  font-size: .8em;
+}
+
+section#work-experience li:nth-of-type(2) {
+  color: red;
+}
+
+section#contact-info p:hover:nth-of-type(2) {
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: green;
+}
