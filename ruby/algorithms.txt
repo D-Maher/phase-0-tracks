@@ -1,0 +1,19 @@
+Helping My Personal Robot Operate an Elevator
+
+- First, before going anywhere near the elevator:
+    + Await input from me via Wi-Fi for the desired floor number
+- Upon entering close proximity to the elevator:
+    + Take note of current floor (should be posted near elevator)
+    + Press button outside elevator corresponding to desired direction of travel:
+        * If desired floor number is greater than current floor number:
+            - Press "up" button
+        * If desired floor number is less than current floor number:
+            - Press "down" button
+        * Otherwise:
+            - Do not press any buttons, you are on the correct floor you silly, silly robot.
+- Once appropriate elevator doors are open:
+    + Wait for those exiting the elevator to clear out 
+    + Enter elevator
+- Once inside the elevator:
+    + Move towards floor selection panel
+    + 
