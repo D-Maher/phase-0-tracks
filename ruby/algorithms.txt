@@ -1,0 +1,67 @@
+Helping My Personal Robot Operate an Elevator
+
+- First, before going anywhere near the elevator:
+    + Await input from me via Wi-Fi for the desired floor number
+- Upon entering close proximity to the elevator:
+    + Take note of current floor (posted near elevator)
+    + Press button outside elevator corresponding to desired direction of travel:
+        * If desired floor number is greater than current floor number:
+            - Press "up" button
+        * If desired floor number is less than current floor number:
+            - Press "down" button
+        * Otherwise:
+            - Do not press any buttons, you are on the correct floor you silly, silly robot.
+- Once appropriate elevator doors are open:
+    + Wait for those exiting the elevator to clear out 
+    + Enter elevator
+- Once inside elevator:
+    + Move towards floor selection panel
+    + Press button corresponding to floor number matching my previous input
+    + Enjoy elevator ride
+
+
+Brushing Teeth
+
+- Obtain toothbrush and toothpaste
+- Position self near sink in bathroom
+- Unscrew toothpaste cap
+- With toothbrush in dominant hand and toothpaste in the other, do the following:
+    + Point open end of toothpaste tube towards bristles of toothbrush
+    + Gently squeeze toothpaste tube until surface of toothbrush bristles is ~75% covered with toothpaste
+- Set toothpaste aside
+- With free hand, turn on faucet
+- Carefully run the loaded toothbrush underneath the water exiting the faucet
+- Turn off faucet
+- Smile and bring toothbrush, bristle-end first, to mouth
+- Press bristles against outer surface of top row of teeth to commence brushing:
+    + With a firm grasp on toothbrush, move toothbrush back in forth in small, quick left to right movements
+        * Continue this movement across outer surface of top teeth until all teeth in top row have been brushed
+    + Move toothbrush down to bottom row of teeth, repeat brushing movement outlined above
+        * Continue this movement until all teeth in bottom row have been brushed
+- Once outer surfaces of teeth have been brushed:
+    + Open mouth wider
+    + Rotate toothbrush in hand until bristles are facing downward
+    + Press bristles against top (chewing) surfaces of bottom teeth
+    + Move tooth brush back and forth in small, quick movements
+        * Continue this movement until all bottom teeth have been brushed in this manner
+    + Rotate toothbrush 180 degrees in hand to press bristles against bottom surfaces of top teeth, repeat brushing movement outlined above
+        * Continue this movement until all teeth in top row have been brushed in this manner
+- If mouth becomes too full of toothpaste at any point:
+    + Pause brushing
+    + Turn on faucet briefly
+    + Spit into sink
+    + Turn off faucet to conserve water
+    + Resume brushing
+- Once all above brushing techniques have been completed:
+    + Turn on faucet
+    + Spit into sink
+    + Rinse mouth out with water:
+        * Place lips to water exiting faucet, not on faucet itself
+        * Let a little water enter mouth
+        * Swish water around inside of mouth with quick back and forth cheek movements
+        * Spit water into sink
+    + Rinse off toothbrush
+    + Turn off faucet
+    + Dry mouth as necessary
+    + Replace toothbrush and toothpaste where found
+    + Smile!
