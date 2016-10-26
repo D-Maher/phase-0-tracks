@@ -18,6 +18,10 @@ if age == 2016 - birth_year && (garlic == "y" || insurance == "y")
   result = "Probably not a vampire."
 elsif age != 2016 - birth_year && (garlic == "n" || insurance == "n")
   result = "Probably a vampire."
+elsif age != 2016 - birth_year && (garlic == "n" && insurance == "n")
+  result = "Almost certainly a vampire!"
+elsif name == "Drake Cula" || name == "Tu Fang"
+  result = "We've definitely got ourselves a vampire here!"
 else
   puts "Results inconclusive."
 end
