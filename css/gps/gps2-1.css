@@ -1,0 +1,45 @@
+h1 {
+  background-color: pink;
+  }
+p {
+  background-color: #60b6e5;
+  }
+article {
+  background-color: #a4dcf9;
+  height: 20%;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+footer {
+  display: block;
+  background-color: pink;
+  clear: both;
+}
+  
+header {
+  display: block;
+  width: 100%;
+  padding: -5px;
+}
+  
+body {
+  width: 100%;
+  display: table;
+  font-family: "Arial";
+}
+
+.column-1 {
+  width: 48%;
+  display: table-cell;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.column-2 {
+  width: 48%;
+  display: table-cell;
+  float: left;
+  margin-left: 2%;
+  margin-bottom: 20px;
+}
