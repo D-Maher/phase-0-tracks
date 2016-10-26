@@ -7,15 +7,19 @@ age = gets.chomp.to_i
 print "Year born: "
 birth_year = gets.chomp.to_i
 
-puts "Our company cafeteria serves garlic bread. Should we order you some?"
+puts "Our company cafeteria serves garlic bread. Should we order you some? (y/n)"
 garlic = gets.chomp
 
-puts "Would you like to enroll in the company's health insurance?"
+puts "Would you like to enroll in the company's health insurance? (y/n)"
 insurance = gets.chomp
 
 
-if age == 2016 - birth_year && (garlic == "yes" || insurance == "yes")
+if age == 2016 - birth_year && (garlic == "y" || insurance == "y")
   result = "Probably not a vampire."
-elsif age != 2016 - birth_year && (garlic == "no" || insurance == "no")
+elsif age != 2016 - birth_year && (garlic == "n" || insurance == "n")
   result = "Probably a vampire."
+else
+  puts "Results inconclusive."
 end
+
+puts result
