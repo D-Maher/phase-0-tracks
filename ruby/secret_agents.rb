@@ -16,33 +16,35 @@ DECRYPT METHOD
 
 =end
 
+index = 0
 
 def encrypt(password)
-  index = 0
-  while index < password.length
+  while index < password.length       
     if password[index] == "z"
       password[index] = "a"
     elsif password[index] == " "
+      # do nothing
     else
       password[index] = password[index].next!
     end
   index += 1
   end
+
   puts "#{password}"
+
   return password
 end
 
 
 def decrypt(password)
-  index = 0
-
   alphabet = "abcdefghijklmnopqrstuvwxyz"
   while index < password.length
     if password[index] == " "
+      # do nothing
     else
-      temp = alphabet.index(password[index])
-      temp -= 1
-      password[index] = alphabet[temp]
+      alpha_index = alphabet.index(password[index])
+      alpha_index -= 1
+      password[index] = alphabet[alpha_index]
     end
     index += 1
   end
@@ -54,10 +56,10 @@ end
 
 quit = false
 while quit != true
-  puts "What would you like to do?"
-  puts "1. Encrypt a password (must do before option 2)"
-  puts "2. Decrypt a password"
-  puts "3. Exit the program"
+  puts "Please enter the number of the desired option below."
+  puts "  1. Encrypt a password (must do before option 2)"
+  puts "  2. Decrypt a password"
+  puts "  3. Exit the program"
   choice = gets.chomp.to_i
 
   case choice
@@ -93,15 +95,13 @@ decrypt(encrypt("swordfish"))
 
 
 =begin
-  
+PSEUDOCODE:
+
 1. use a menu to ask user what they would like to do
-  - menu as while loop
-2. options of menu: 
-  -Asks a secret agent (the user) whether they 
-   would like to decrypt or encrypt a password
-  -Asks them for the password
-  -Conducts the requested operation, 
-   prints the result to the screen
-  -Quit program
-  
+  - menu options in case statement
+2. asks a secret agent (the user) what they would like to do
+  - options of menu: 
+    - asks user for the password to encrypt
+    - lets user decrypt that password 
+    - quit program
 =end
