@@ -12,38 +12,41 @@ DECRYPT METHOD
 
 - reverse encrypt
 - shift letters back one index
-  - use alphabet string
+  - use alphabet string for index reference
 
 =end
 
-index = 0
 
 def encrypt(password)
+  index = 0 # must be inside method (local variable)
+
   while index < password.length       
-    if password[index] == "z"
-      password[index] = "a"
-    elsif password[index] == " "
+    if password[index] == "z" # edge case
+      password[index] = "a" # shifts z to a instead of aa
+    elsif password[index] == " " # when password character is a space
       # do nothing
     else
-      password[index] = password[index].next!
+      password[index] = password[index].next! # shift to next letter up
     end
-  index += 1
+  index += 1 # increments index of password by +1
   end
 
   puts "#{password}"
 
-  return password
+  return password # returns the value of running encrypt on a given password
 end
 
 
 def decrypt(password)
+  index = 0 # must be inside method (local variable)     
   alphabet = "abcdefghijklmnopqrstuvwxyz"
+
   while index < password.length
-    if password[index] == " "
+    if password[index] == " " # when password character is a space
       # do nothing
     else
-      alpha_index = alphabet.index(password[index])
-      alpha_index -= 1
+      alpha_index = alphabet.index(password[index]) # .index here is a built-in method
+      alpha_index -= 1 # decrements index of alphabet by -1
       password[index] = alphabet[alpha_index]
     end
     index += 1
@@ -52,7 +55,7 @@ def decrypt(password)
 end
 
 
-# MAIN - driver code
+# Driver Code
 
 quit = false
 while quit != true
