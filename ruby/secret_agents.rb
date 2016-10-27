@@ -11,38 +11,43 @@ ENCRYPT METHOD
 DECRYPT METHOD
 
 - reverse encrypt
-- go backward one letter
-  - 
+- shift letters back one index
+  - use alphabet string for index reference
 
 =end
 
 
 def encrypt(password)
-  index = 0
-  while index < password.length
-    if password[index] == "z"
-      password[index] = "a"
-    elsif password[index] == " "
+  index = 0 # must be inside method (local variable)
+
+  while index < password.length       
+    if password[index] == "z" # edge case
+      password[index] = "a" # shifts z to a instead of aa
+    elsif password[index] == " " # when password character is a space
+      # do nothing
     else
-      password[index] = password[index].next!
+      password[index] = password[index].next! # shift to next letter up
     end
-  index += 1
+  index += 1 # increments index of password by +1
   end
+
   puts "#{password}"
-  return password
+
+  return password # returns the value of running encrypt on a given password
 end
 
 
 def decrypt(password)
-  index = 0
-
+  index = 0 # must be inside method (local variable)     
   alphabet = "abcdefghijklmnopqrstuvwxyz"
+
   while index < password.length
-    if password[index] == " "
+    if password[index] == " " # when password character is a space
+      # do nothing
     else
-      temp = alphabet.index(password[index])
-      temp -= 1
-      password[index] = alphabet[temp]
+      alpha_index = alphabet.index(password[index]) # .index here is a built-in method
+      alpha_index -= 1 # decrements index of alphabet by -1
+      password[index] = alphabet[alpha_index]
     end
     index += 1
   end
@@ -50,14 +55,14 @@ def decrypt(password)
 end
 
 
-# MAIN - driver code
+# Driver Code
 
 quit = false
 while quit != true
-  puts "What would you like to do?"
-  puts "1. Encrypt a password (must do before option 2)"
-  puts "2. Decrypt a password"
-  puts "3. Exit the program"
+  puts "Please enter the number of the desired option below."
+  puts "  1. Encrypt a password (must do before option 2)"
+  puts "  2. Decrypt a password"
+  puts "  3. Exit the program"
   choice = gets.chomp.to_i
 
   case choice
@@ -78,14 +83,17 @@ while quit != true
     end
 end
 
+# Release 3
 encrypt("abc")
 encrypt("zed")
 decrypt("bcd")
 decrypt("afe")
 
+# test of individual methods
 encrypt(password)
 decrypt(password)
 
+# Release 4
 decrypt(encrypt("swordfish"))
 # This nested method call works because the encrypt method is returning
 # the password and decrypt is accepting the returned value as an argument
@@ -93,15 +101,13 @@ decrypt(encrypt("swordfish"))
 
 
 =begin
-  
+PSEUDOCODE:
+
 1. use a menu to ask user what they would like to do
-  - menu as while loop
-2. options of menu: 
-  -Asks a secret agent (the user) whether they 
-   would like to decrypt or encrypt a password
-  -Asks them for the password
-  -Conducts the requested operation, 
-   prints the result to the screen
-  -Quit program
-  
+  - menu options in case statement
+2. asks a secret agent (the user) what they would like to do
+  - options of menu: 
+    - asks user for the password to encrypt
+    - lets user decrypt that password 
+    - quit program
 =end
