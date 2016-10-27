@@ -11,8 +11,8 @@ ENCRYPT METHOD
 DECRYPT METHOD
 
 - reverse encrypt
-- go backward one letter
-  - 
+- shift letters back one index
+  - use alphabet string
 
 =end
 
@@ -80,14 +80,17 @@ while quit != true
     end
 end
 
+# Release 3
 encrypt("abc")
 encrypt("zed")
 decrypt("bcd")
 decrypt("afe")
 
+# test of individual methods
 encrypt(password)
 decrypt(password)
 
+# Release 4
 decrypt(encrypt("swordfish"))
 # This nested method call works because the encrypt method is returning
 # the password and decrypt is accepting the returned value as an argument
