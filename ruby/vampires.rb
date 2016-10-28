@@ -1,3 +1,8 @@
+puts "How many employees will we be processing today?"
+employees = gets.chomp.to_i
+
+employees.times {
+
 puts "What is your name?"
 name = gets.chomp
 
@@ -27,3 +32,5 @@ else
 end
 
 puts result
+
+}
