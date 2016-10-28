@@ -19,7 +19,6 @@ puts "Would you like to enroll in the company's health insurance? (y/n)"
 insurance = gets.chomp
 
 result = "Results inconclusive."
-
 # The if statements below CANNOT be changed to an if/elsif/else block
 # because the first 'if' or 'elsif' that is matched will execute its code
 if age == 2016 - birth_year && (garlic == "y" || insurance == "y")
@@ -38,17 +37,18 @@ if name == "Drake Cula" || name == "Tu Fang"
   result = "Okay... #{name} is definitely a vampire."
 end
 
-# allergy = nil
-# until allergy == "sunshine"
-#   puts "Please list your allergies below... you know, for health reasons and all that."
-#   allergy = gets.chomp
-#   if allergy == "sunshine"
-#     result = "Probably a vampire."
-#   elsif allergy == "done"
-#     break
-#   else
-#   end
-# end
+allergy = nil
+until allergy == "sunshine"
+  puts "Please list your allergies below... you know, for health reasons and all that."
+  puts "Type 'done' when you are finished listing your allergies."
+  allergy = gets.chomp
+  if allergy == "sunshine"
+    result = "Probably a vampire."
+  elsif allergy == "done"
+    break
+  else
+  end
+end
 
 puts "Our survey says... #{result}"
 
