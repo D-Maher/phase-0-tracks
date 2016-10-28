@@ -21,11 +21,11 @@ puts "Is this hamster a good candidate for adoption? (yes/no)"
   end
 
 puts "What do you suppose this hamster's age is?"
-  age = gets.chomp.to_i
-
-  until age.is_a?(Fixnum) && age > 0
-    puts "Error. Please enter a valid number (greater than 0) for the hamster's age."
-    age = gets.chomp.to_i
+  age = gets.chomp
+  if age.empty?
+    age = nil
+  else
+    age = age.to_i
   end
 
 puts "Excellent! #{name} is now in our system."
