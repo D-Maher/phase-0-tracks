@@ -20,17 +20,29 @@ insurance = gets.chomp
 
 
 if age == 2016 - birth_year && (garlic == "y" || insurance == "y")
-  result = "Probably not a vampire."
+  result = "#{name} is probably not a vampire."
 elsif age != 2016 - birth_year && (garlic == "n" || insurance == "n")
-  result = "Probably a vampire."
+  result = "#{name} probably a vampire."
 elsif age != 2016 - birth_year && (garlic == "n" && insurance == "n")
-  result = "Almost certainly a vampire!"
+  result = "#{name} is almost certainly a vampire!"
 elsif name == "Drake Cula" || name == "Tu Fang"
-  result = "We've definitely got ourselves a vampire here!"
+  result = "Okay... #{name} is definitely a vampire."
 else
   puts "Results inconclusive."
 end
 
-puts result
+#allergy = nil
+#until allergy == "sunshine"
+#  puts "Please list your allergies below... you know, for health reasons and all that."
+#  allergy = gets.chomp
+#  if allergy == "sunshine"
+#    result = "Probably a vampire."
+#  elsif allergy == "done"
+#    break
+#  else
+#  end
+#end
+
+puts "Our survey says... #{result}"
 
 }
