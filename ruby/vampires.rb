@@ -1,3 +1,8 @@
+puts "How many employees will we be processing today?"
+employees = gets.chomp.to_i
+
+employees.times {
+
 puts "What is your name?"
 name = gets.chomp
 
@@ -13,17 +18,40 @@ garlic = gets.chomp
 puts "Would you like to enroll in the company's health insurance? (y/n)"
 insurance = gets.chomp
 
-
+result = "Results inconclusive."
+# The if statements below CANNOT be changed to an if/elsif/else block
+# because the first 'if' or 'elsif' that is matched will execute its code
 if age == 2016 - birth_year && (garlic == "y" || insurance == "y")
-  result = "Probably not a vampire."
-elsif age != 2016 - birth_year && (garlic == "n" || insurance == "n")
-  result = "Probably a vampire."
-elsif age != 2016 - birth_year && (garlic == "n" && insurance == "n")
-  result = "Almost certainly a vampire!"
-elsif name == "Drake Cula" || name == "Tu Fang"
-  result = "We've definitely got ourselves a vampire here!"
-else
-  puts "Results inconclusive."
+  result = "#{name} is probably not a vampire."
 end
 
-puts result
+if age != 2016 - birth_year && (garlic == "n" || insurance == "n")
+  result = "#{name} is probably a vampire."
+end
+
+if age != 2016 - birth_year && (garlic == "n" && insurance == "n")
+  result = "#{name} is almost certainly a vampire!"
+end
+
+if name == "Drake Cula" || name == "Tu Fang"
+  result = "Okay... #{name} is definitely a vampire."
+end
+
+allergy = nil
+until allergy == "sunshine"
+  puts "Please list your allergies below... you know, for health reasons and all that."
+  puts "Type 'done' when you are finished listing your allergies."
+  allergy = gets.chomp
+  if allergy == "sunshine"
+    result = "Probably a vampire."
+  elsif allergy == "done"
+    break
+  else
+  end
+end
+
+puts "Our survey says... #{result}"
+
+}
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
