@@ -19,17 +19,20 @@ puts "Would you like to enroll in the company's health insurance? (y/n)"
 insurance = gets.chomp
 
 result = "Results inconclusive."
+
+time = Time.new
+
 # The if statements below CANNOT be changed to an if/elsif/else block
 # because the first 'if' or 'elsif' that is matched will execute its code
-if age == 2016 - birth_year && (garlic == "y" || insurance == "y")
+if age == time.year - birth_year && (garlic == "y" || insurance == "y")
   result = "#{name} is probably not a vampire."
 end
 
-if age != 2016 - birth_year && (garlic == "n" || insurance == "n")
+if age != time.year - birth_year && (garlic == "n" || insurance == "n")
   result = "#{name} is probably a vampire."
 end
 
-if age != 2016 - birth_year && (garlic == "n" && insurance == "n")
+if age != time.year - birth_year && (garlic == "n" && insurance == "n")
   result = "#{name} is almost certainly a vampire!"
 end
 
