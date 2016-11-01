@@ -22,3 +22,23 @@
 
 #---------------------------------------------------------------------
 
+# HASH SETUP
+
+client = {
+  name: name,
+  age: age,
+  number_of_children: children,
+  decor_theme: theme,
+  loves_taxidermy?: taxidermy
+}
+
+
+# DRIVER CODE
+
+puts "Hello and welcome!"
+
+puts "What is your name?"
+  name = gets.chomp
+  client[:name] = name
+
+puts ""
