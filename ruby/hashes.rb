@@ -63,6 +63,8 @@ puts "Do you love taxidermy? (y/n)"
 p client
 
 
+# Updating the client hash
+
 puts "Would you like to update any of the fields above? If so, please type the name of the field you would like to update. Otherwise, type 'none' to skip this step."
   answer = gets.chomp.to_sym
 
