@@ -1,4 +1,6 @@
-# methods that takes a block
+# RELEASE 0
+
+# methods that take a block
 def ice_cream
   yield("vanilla", "strawberry")
 end
@@ -13,3 +15,21 @@ def animals
 end
 
 animals { |x, y, z| puts "A few of my favorite animals are #{x}, #{y}, and #{z}." }
+
+
+# RELEASE 1
+
+colors = ["red", "blue", "yellow"]
+
+state_capitals = {
+  Illinois: "Springfield",
+  Wisconsin: "Madison",
+  Arizona: "Phoenix"
+}
+
+
+
+# using .each
+
+
+# using .map! on an array
