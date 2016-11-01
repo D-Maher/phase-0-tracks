@@ -61,9 +61,9 @@ p colors
 
 numbers1 = [67, 4, 4, 1, 82, 3, 734, 2, 5, 1, 3, 75]
 
-numbers.each do |n|
+numbers1.each do |n|
   if n < 5
-    numbers.delete(n)
+    numbers1.delete(n)
   elsif n > 5
     n
   else
@@ -71,13 +71,15 @@ numbers.each do |n|
   end
 end
 
-p numbers
+p numbers1
 
 # A method that filters a data structure for only items that do satisfy a certain condition (for example, keeping any numbers that are less than 5).
 
-numbers1 = [67, 4, 4, 1, 82, 3, 734, 2, 5, 1, 3, 75]
+numbers2 = [67, 4, 4, 1, 82, 3, 734, 2, 5, 1, 3, 75]
 
+numbers2.keep_if {|n| n < 5 }
 
+p numbers2
 
 # A different method that filters a data structure for only items satisfying a certain condition -- Ruby offers several options!
 
