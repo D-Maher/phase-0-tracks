@@ -24,13 +24,7 @@
 
 # HASH SETUP
 
-client = {
-  name: name,
-  age: age,
-  number_of_children: children,
-  decor_theme: theme,
-  loves_taxidermy: taxidermy
-}
+client = {} # empty hash
 
 
 # DRIVER CODE
