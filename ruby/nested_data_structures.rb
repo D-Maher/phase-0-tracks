@@ -14,9 +14,14 @@ zoo = {
     fun_facts: {
       date_built: 1992
       days_since_incident: 724
-      chimpanzee_rivalries: [
+      primate_rivalries: {
+        gorilla_rivalries: [
+          "Koko vs Turk"
+        ]
+        chimpanzee_rivalries: [
         "Paul vs John"
-      ]
+        ]
+      }
     }
   }
 
