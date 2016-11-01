@@ -29,7 +29,7 @@ client = {
   age: age,
   number_of_children: children,
   decor_theme: theme,
-  loves_taxidermy?: taxidermy
+  loves_taxidermy: taxidermy
 }
 
 
@@ -41,4 +41,26 @@ puts "What is your name?"
   name = gets.chomp
   client[:name] = name
 
-puts ""
+puts "How old are you?"
+  age = gets.chomp.to_i
+  client[:age] = age
+
+puts "How many children do you have?"
+  children = gets.chomp.to_i
+  client[:number_of_children] = children
+
+puts "What decor theme are you looking for?"
+  theme = gets.chomp
+  client[:decor_theme] = theme
+
+puts "Do you love taxidermy? (y/n)"
+  taxidermy = gets.chomp
+    if taxidermy == "y"
+      taxidermy = true
+    else
+      taxidermy = false
+    end
+  client[:loves_taxidermy] = taxidermy
+
+
+p client
