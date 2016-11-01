@@ -53,3 +53,34 @@ colors.map! do |color|
 end
 
 p colors
+
+
+# RELEASE 2
+
+# A method that iterates through the items, deleting any that meet a certain condition (for example, deleting any numbers that are less than 5).
+
+numbers1 = [67, 4, 4, 1, 82, 3, 734, 2, 5, 1, 3, 75]
+
+numbers.each do |n|
+  if n < 5
+    numbers.delete(n)
+  elsif n > 5
+    n
+  else
+    n
+  end
+end
+
+p numbers
+
+# A method that filters a data structure for only items that do satisfy a certain condition (for example, keeping any numbers that are less than 5).
+
+numbers1 = [67, 4, 4, 1, 82, 3, 734, 2, 5, 1, 3, 75]
+
+
+
+# A different method that filters a data structure for only items satisfying a certain condition -- Ruby offers several options!
+
+
+
+# A method that will remove items from a data structure until the condition in the block evaluates to false, then stops (you may not find a perfectly working option for the hash, and that's okay).
