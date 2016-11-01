@@ -59,19 +59,35 @@ p colors
 
 # A method that iterates through the items, deleting any that meet a certain condition (for example, deleting any numbers that are less than 5).
 
+# array
+
 numbers1 = [67, 4, 4, 1, 82, 3, 734, 2, 5, 1, 3, 75]
 
 numbers1.each do |n|
   if n < 5
     numbers1.delete(n)
-  elsif n > 5
-    n
-  else
-    n
   end
 end
 
 p numbers1
+
+# hash
+
+favorites = {
+  animal: "platypus",
+  color: "blue",
+  food: "tacos",
+  movie: "Interstellar"
+}
+
+favorites.each do |thing, variety|
+  if variety.length <= 5
+    favorites.delete(thing)
+  end
+end
+
+p favorites
+
 
 # A method that filters a data structure for only items that do satisfy a certain condition (for example, keeping any numbers that are less than 5).
 
@@ -81,7 +97,12 @@ numbers2.keep_if {|n| n < 5 }
 
 p numbers2
 
+
+
 # A different method that filters a data structure for only items satisfying a certain condition -- Ruby offers several options!
+
+
+
 
 
 
