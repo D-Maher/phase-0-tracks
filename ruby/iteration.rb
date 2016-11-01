@@ -27,9 +27,18 @@ state_capitals = {
   Arizona: "Phoenix"
 }
 
+# using .each on hash and array
 
+colors.each { |color| puts "I like the color #{color}." }
 
-# using .each
+state_capitals.each { |state, capital| puts "The capital of #{state} is #{capital}."}
 
 
 # using .map! on an array
+
+colors.map! do |color|
+  puts color
+  color.reverse
+end
+
+p colors
