@@ -51,8 +51,11 @@ puts "Do you love taxidermy? (y/n)"
   taxidermy = gets.chomp
     if taxidermy == "y"
       taxidermy = true
-    else
+    elsif taxidermy == "n"
       taxidermy = false
+    else
+      puts "Okay, I am assuming you love taxidermy, because who doesn't?"
+      taxidermy = true
     end
   client[:loves_taxidermy] = taxidermy
 
@@ -65,3 +68,35 @@ puts "Would you like to update any of the fields above? If so, please type the n
 
 case answer
 when :name
+  puts "What would you like to change your name to?"
+  name = gets.chomp
+  client[:name] = name
+when :age
+  puts "What would you like to change your age to?"
+  age = gets.chomp.to_i
+  client[:age] = age
+when :number_of_children
+  puts "How many children do you have?"
+  children = gets.chomp.to_i
+  client[:number_of_children] = children
+when :decor_theme
+  puts "What decor theme are you interested in instead?"
+  theme = gets.chomp
+  client[:decor_theme] = theme
+when :loves_taxidermy
+  puts "Do you love taxidermy?"
+  taxidermy = gets.chomp
+    if taxidermy == "y"
+      taxidermy = true
+    elsif taxidermy == "n"
+      taxidermy = false
+    else
+      puts "Okay, I am assuming you love taxidermy, because who doesn't?"
+      taxidermy = true
+    end
+  client[:loves_taxidermy] = taxidermy
+when :none
+end
+
+
+p client
