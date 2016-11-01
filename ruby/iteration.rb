@@ -63,6 +63,8 @@ p colors
 
 numbers1 = [67, 4, 4, 1, 82, 3, 734, 2, 5, 1, 3, 75]
 
+p numbers1
+
 numbers1.each do |n|
   if n < 5
     numbers1.delete(n)
@@ -80,6 +82,8 @@ favorites = {
   movie: "Interstellar"
 }
 
+p favorites
+
 favorites.each do |thing, variety|
   if variety.length <= 5
     favorites.delete(thing)
@@ -91,12 +95,29 @@ p favorites
 
 # A method that filters a data structure for only items that do satisfy a certain condition (for example, keeping any numbers that are less than 5).
 
+# array
+
 numbers2 = [67, 4, 4, 1, 82, 3, 734, 2, 5, 1, 3, 75]
 
 numbers2.keep_if {|n| n < 5 }
 
 p numbers2
 
+# hash
+
+roman_numerals = {
+  one: "i",
+  two: "ii",
+  three: "iii",
+  four: "iv",
+  five: "v"
+}
+
+p roman_numerals
+
+roman_numerals.keep_if {|english, roman| roman.include?("v")}
+
+p roman_numerals
 
 
 # A different method that filters a data structure for only items satisfying a certain condition -- Ruby offers several options!
