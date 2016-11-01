@@ -29,15 +29,26 @@ state_capitals = {
 
 # using .each on hash and array
 
-colors.each { |color| puts "I like the color #{color}." }
+puts "This is the colors array before .each:"
+p colors
 
-state_capitals.each { |state, capital| puts "The capital of #{state} is #{capital}."}
+puts "This is the colors array after .each:"
+p colors.each { |color| puts "I like the color #{color}." }
+
+puts "This is the state_capitals hash before .each:"
+p state_capitals
+
+puts "This is the state_capitals hash after .each:"
+p state_capitals.each { |state, capital| puts "The capital of #{state} is #{capital}."}
 
 
 # using .map! on an array
 
+puts "This is the colors array before .map!:"
+p colors
+
+puts "This is the colors array after .map!:"
 colors.map! do |color|
-  puts color
   color.reverse
 end
 
