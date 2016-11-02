@@ -66,4 +66,5 @@ zoo = {
 # Access last chimpanzee rivalry in the list
 puts zoo[:primate_exhibit][:fun_facts][:primate_rivalries][:chimpanzee_rivalries].last
 
-# 
+# access second fish in the array 'other_fish'
+puts zoo[:aquatic_exhibit][:fish][:other_fish][1]
