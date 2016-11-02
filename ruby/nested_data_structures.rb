@@ -69,5 +69,5 @@ puts zoo[:primate_exhibit][:fun_facts][:primate_rivalries][:chimpanzee_rivalries
 # access second fish in the array 'other_fish'
 puts zoo[:aquatic_exhibit][:fish][:other_fish][1]
 
-# access 'start_time' and 'end_time' of 'dolphin_show'
+# access 'start_time' and 'end_time' of 'dolphin_show', print together
 puts zoo[:aquatic_exhibit][:dolphin_show][:start_time] + "-" + zoo[:aquatic_exhibit][:dolphin_show][:end_time]
