@@ -99,7 +99,7 @@ p favorites
 
 numbers2 = [67, 4, 4, 1, 82, 3, 734, 2, 5, 1, 3, 75]
 
-numbers2.keep_if {|n| n < 5 }
+numbers2.keep_if { |n| n < 5 }
 
 p numbers2
 
@@ -115,16 +115,39 @@ roman_numerals = {
 
 p roman_numerals
 
-roman_numerals.keep_if {|english, roman| roman.include?("v")}
+roman_numerals.keep_if { |english, roman| roman.include?("v") }
 
 p roman_numerals
 
 
 # A different method that filters a data structure for only items satisfying a certain condition -- Ruby offers several options!
 
+# array
 
+words = ["going", "swing", "rock", "blob", "skeleton", "wing"]
 
+p words
 
+words.select! { |word| word.include?("ing") }
+
+p words
+
+# hash
+
+redundant_hash = {
+  one: "one",
+  green: "green",
+  rock: "geode",
+  h: "h",
+  ruby: "awesome"
+}
+
+p redundant_hash
+
+redundant_hash.select! { |key_symbol, value_string| key_symbol.to_s == value_string }
+
+p redundant_hash
 
 
 # A method that will remove items from a data structure until the condition in the block evaluates to false, then stops (you may not find a perfectly working option for the hash, and that's okay).
+
