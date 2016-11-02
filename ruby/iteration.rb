@@ -160,3 +160,18 @@ p numbers3
 numbers3_dropped = numbers3.drop_while { |n| numbers3.index(n) <= 5 }
 
 p numbers3_dropped
+
+# hash
+
+noises = {
+  boom: "BOOM",
+  smack: "SMACK",
+  wham: "WHAM",
+  zip: "ZIP"
+}
+
+p noises
+
+noises.delete_if { |quiet, loud| noises.length > 2 }
+
+p noises
