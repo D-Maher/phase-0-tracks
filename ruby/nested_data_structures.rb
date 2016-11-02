@@ -53,7 +53,7 @@ zoo = {
     dolphin_show: {
       start_time: "3:00pm",
       end_time: "4:00pm",
-      seats_available: 500,
+      total_seats_available: 500,
       average_daily_attendance: 421
     },
   }
@@ -63,8 +63,11 @@ zoo = {
 
 # Driver Code
 
-# Access last chimpanzee rivalry in the list
+# access last chimpanzee rivalry in the list
 puts zoo[:primate_exhibit][:fun_facts][:primate_rivalries][:chimpanzee_rivalries].last
 
 # access second fish in the array 'other_fish'
 puts zoo[:aquatic_exhibit][:fish][:other_fish][1]
+
+# access 'start_time' and 'end_time' of 'dolphin_show'
+puts zoo[:aquatic_exhibit][:dolphin_show][:start_time] + "-" + zoo[:aquatic_exhibit][:dolphin_show][:end_time]
