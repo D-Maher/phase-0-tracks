@@ -151,3 +151,12 @@ p redundant_hash
 
 # A method that will remove items from a data structure until the condition in the block evaluates to false, then stops (you may not find a perfectly working option for the hash, and that's okay).
 
+# array
+
+numbers3 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+p numbers3
+
+numbers3_dropped = numbers3.drop_while { |n| numbers3.index(n) <= 5 }
+
+p numbers3_dropped
