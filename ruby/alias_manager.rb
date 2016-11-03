@@ -16,18 +16,26 @@
   #-------------------------------------------------------------------
 
 def swap_names(first_last)
-  last_first = first_last.split(' ').reverse
+  last_first = first_last.split(' ').reverse # returns array of ["last name", "first name"]
 end
 
 def alias_maker(first_last)
   vowels = "aeiou".split('')
   consonants = "bcdfghjklmnpqrstvwxyz".split('')
 
-  p swap_names(first_last)
+  last_first = swap_names(first_last)
 
-  #swap_first = last_first[0].split('')
-  #
-  #alias_first.each do |letter|
+  alias_first_letters = last_first[0].split('')
+
+  alias_last_letters = last_first[1].split('')
+
+  alias_first_letters.each do |letter|
+
+  end
+
+  alias_last_letters.each do |letter|
+    
+  end
   
 end
 
