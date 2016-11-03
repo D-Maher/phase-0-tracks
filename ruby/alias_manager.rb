@@ -20,6 +20,8 @@ def swap_names(first_last)
 end
 
 def alias_maker(first_last)
+  index = 0
+
   vowels = "aeiou".split('')
   consonants = "bcdfghjklmnpqrstvwxyz".split('')
 
@@ -30,11 +32,27 @@ def alias_maker(first_last)
   alias_last_letters = last_first[1].split('')
 
   alias_first_letters.each do |letter|
+    letter = letter.downcase
+    if vowels.include?(letter)
+      p letter
+      # vowel_index = vowels.index(alias_first_letters[index])
+      # new_vowel = vowels[vowel_index].next
+      # p new_vowel
+    # elsif consonants.include(letter)
+    #   letter = 
+    elsif consonants.include?(letter)
+      p letter
+    end
 
   end
 
   alias_last_letters.each do |letter|
-    
+    letter = letter.downcase
+    if vowels.include?(letter)
+      p letter
+    elsif consonants.include?(letter)
+      p letter
+    end
   end
   
 end
