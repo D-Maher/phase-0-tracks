@@ -12,4 +12,9 @@
   #-------------------------------------------------------------------
 
 def alias_maker(full_name)
-  full_name
+  split_name = full_name.split(" ")
+  reverse_name = split_name.reverse
+  p reverse_name
+end
+
+alias_maker("Danny Maher")
