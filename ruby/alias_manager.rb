@@ -15,20 +15,21 @@
 
   #-------------------------------------------------------------------
 
-def alias_maker(full_name)
+def swap_names(first_last)
+  last_first = first_last.split(' ').reverse
+end
+
+def alias_maker(first_last)
   vowels = "aeiou".split('')
   consonants = "bcdfghjklmnpqrstvwxyz".split('')
 
-  split_name = full_name.split(" ")
-  reverse_split = split_name.reverse
-  p reverse_split
+  p swap_names(first_last)
 
-  p reverse_split[0].split('')
-
-  p vowels
-
-  p consonants
-
+  #swap_first = last_first[0].split('')
+  #
+  #alias_first.each do |letter|
+  
 end
+
 
 alias_maker("Danny Maher")
