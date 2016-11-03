@@ -16,10 +16,19 @@
   #-------------------------------------------------------------------
 
 def alias_maker(full_name)
+  vowels = "aeiou".split('')
+  consonants = "bcdfghjklmnpqrstvwxyz".split('')
+
   split_name = full_name.split(" ")
   reverse_split = split_name.reverse
-  reverse_name = reverse_split[0] + " " + reverse_split[1]
-  p reverse_name
+  p reverse_split
+
+  p reverse_split[0].split('')
+
+  p vowels
+
+  p consonants
+
 end
 
 alias_maker("Danny Maher")
