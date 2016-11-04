@@ -14,8 +14,8 @@
 def search_array(array, integer)
   index = 0
   array.each do |int|
-    if array.include?(int)
-      index
+    if int == integer
+      puts "#{integer} was found in the array! It's index is #{index}."
     else
       nil
     end
@@ -25,4 +25,4 @@ end
 
 test_array = [2, 7, 55, 13, 24, 17, 9]
 
-p search_array(test_array, 24)
+search_array(test_array, 5)
