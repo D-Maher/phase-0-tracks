@@ -83,14 +83,16 @@ def alias_generator(name)
 
   alias_name = last_name_letters.join.capitalize + " " + first_name_letters.join.capitalize
 
-  puts alias_name
+  alias_name
 end
 
 
 
 # DRIVER CODE
 
+puts "Hello there! Please enter a first name and a last name to generate an alias!"
+name = gets.chomp
 
-alias_generator("Zack Button")
+secret_alias = alias_generator(name)
 
-
+puts "#{name}'s alias is #{secret_alias}."
