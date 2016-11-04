@@ -50,7 +50,7 @@ def next_vowel(letters_array) # WORKS!
   end
 end
 
-def next_consonant(letters_array)
+def next_consonant(letters_array) # WORKS!
   index = 0
   while index < letters_array.length
     if letters_array[index] == "z"
@@ -65,7 +65,7 @@ def next_consonant(letters_array)
 end
 
 
-def alias_generator(name)
+def alias_generator(name) # WORKS!
   swap_array = swap_names(name)
 
   last_name_letters = split_names(swap_array[0]) 
@@ -90,9 +90,14 @@ end
 
 # DRIVER CODE
 
-puts "Hello there! Please enter a first name and a last name to generate an alias!"
-name = gets.chomp
+name = nil
 
-secret_alias = alias_generator(name)
+until name == "quit"
+  puts "Hello there! Please enter a first name and a last name to generate an alias!" 
+  puts "Otherwise, type 'quit' to exit the Alias Generator."
+  name = gets.chomp
 
-puts "#{name}'s alias is #{secret_alias}."
+  secret_alias = alias_generator(name)
+
+  puts "#{name}'s secret alias is #{secret_alias}."
+end
