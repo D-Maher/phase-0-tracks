@@ -98,6 +98,8 @@ end
 
 # DRIVER CODE
 
+alias_list = {}
+
 name = nil
 
 until name == "quit"
@@ -109,5 +111,12 @@ until name == "quit"
   else
     secret_alias = alias_generator(name)
   end
-    puts "#{name}'s secret alias is #{secret_alias}."
+  alias_list[name.to_sym] = secret_alias
+  puts "#{name}'s secret alias is #{secret_alias}."
+end
+
+puts "Below is a list of all known agents and their respective aliases:"
+
+alias_list.each do |name, secret_alias|
+  puts "#{name}, a.k.a. #{secret_alias}"
 end
