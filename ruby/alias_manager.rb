@@ -64,46 +64,50 @@ def next_consonant(letters_array) # WORKS!
   letters_array
 end
 
-test_array = "danny".split('')
 
-next_vowel(test_array)
-next_consonant(test_array)
+def alias_generator(name) # WORKS!
+  swap_array = swap_names(name)
 
-p test_array
-
-# def alias_generator(name) # WORKS!
-#   swap_array = swap_names(name)
-
-#   last_name_letters = split_names(swap_array[0]) 
-#   first_name_letters = split_names(swap_array[1])
+  if swap_array.length == 2
+    last_name_letters = split_names(swap_array[0]) 
+    first_name_letters = split_names(swap_array[1])
   
+    next_vowel(last_name_letters)
+    next_vowel(first_name_letters)
 
-#   next_vowel(last_name_letters)
-#   next_vowel(first_name_letters)
+    next_consonant(last_name_letters)
+    next_consonant(first_name_letters)
 
-#   next_consonant(last_name_letters)
-#   next_consonant(first_name_letters)
+    alias_name = last_name_letters.join.capitalize + " " + first_name_letters.join.capitalize
 
-#   last_name_letters
-#   first_name_letters
+  elsif swap_array.length == 1
+    name_letters = split_names(swap_array[0])   
 
-#   alias_name = last_name_letters.join.capitalize + " " + first_name_letters.join.capitalize
+    next_vowel(name_letters)
 
-#   alias_name
-# end
+    next_consonant(name_letters)
 
+    alias_name = name_letters.join.capitalize
 
+  else
+    puts "Please enter a valid name!"
+  end
 
-# # DRIVER CODE
+  alias_name
+end
 
-# name = nil
+# DRIVER CODE
 
-# until name == "quit"
-#   puts "Hello there! Please enter a first name and a last name to generate an alias!" 
-#   puts "Otherwise, type 'quit' to exit the Alias Generator."
-#   name = gets.chomp
+name = nil
 
-#   secret_alias = alias_generator(name)
-
-#   puts "#{name}'s secret alias is #{secret_alias}."
-# end
+until name == "quit"
+  puts "Hello there! Please enter a first name and a last name to generate an alias!" 
+  puts "Otherwise, type 'quit' to exit the Alias Generator."
+  name = gets.chomp
+  if name == "quit"
+    break
+  else
+    secret_alias = alias_generator(name)
+  end
+    puts "#{name}'s secret alias is #{secret_alias}."
+end
