@@ -50,22 +50,26 @@ def next_vowel(letters_array) # WORKS!
   letters_array
 end
 
-p next_vowel("danny".split(''))
+def next_consonant(letters_array) # WORKS!
+  index = 0
+  while index < letters_array.length
+    if letters_array[index] == "z"
+      letters_array[index] = "b"
+    elsif $consonants.include?(letters_array[index]) # if letter is a consonant
+      consonant_index = $consonants.index(letters_array[index])
+      letters_array[index] = $consonants[consonant_index.next]
+    end
+    index += 1
+  end
+  letters_array
+end
 
-# def next_consonant(letters_array) # WORKS!
-#   index = 0
-#   while index < letters_array.length
-#     if letters_array[index] == "z"
-#       letters_array[index] = "b"
-#     elsif $consonants.include?(letters_array[index]) # if letter is a consonant
-#       consonant_index = $consonants.index(letters_array[index])
-#       letters_array[index] = $consonants[consonant_index.next]
-#       letters_array
-#     end
-#     index += 1
-#   end
-# end
+test_array = "danny".split('')
 
+next_vowel(test_array)
+next_consonant(test_array)
+
+p test_array
 
 # def alias_generator(name) # WORKS!
 #   swap_array = swap_names(name)
