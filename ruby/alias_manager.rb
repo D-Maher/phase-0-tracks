@@ -37,13 +37,22 @@ def next_vowel(letters_array) # WORKS!
     if $vowels.include?(letters_array[index]) # if letter is a vowel
       vowel_index = $vowels.index(letters_array[index])
       letters_array[index] = $vowels[vowel_index.next]
-      p letters_array
+      letters_array
     end
     index += 1
   end
 end
 
-def next_consonant
+def next_consonant(letters_array)
+  index = 0
+  while index < letters_array.length
+    if $consonants.include?(letters_array[index]) # if letter is a consonant
+      consonant_index = $consonants.index(letters_array[index])
+      letters_array[index] = $consonants[consonant_index.next]
+      letters_array
+    end
+    index += 1
+  end
 end
 
 
@@ -57,7 +66,15 @@ def alias_maker(name)
   next_vowel(last_name_letters)
   next_vowel(first_name_letters)
 
+  next_consonant(last_name_letters)
+  next_consonant(first_name_letters)
 
+  last_name_letters
+  first_name_letters
+
+  alias_name = last_name_letters.join + " " + first_name_letters.join
+
+  alias_name
 end
 
 alias_maker("Danny Maher")
