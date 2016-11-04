@@ -15,29 +15,56 @@
 
   #-------------------------------------------------------------------
 
-vowels = "aeiou".split('') # an array of all vowels in alpha order
-consonants = "bcdfghjklmnpqrstvwxyz".split('') # an array of all consonants in alpha order
+$vowels = "aeiou".split('') # an array of all vowels in alpha order
+$consonants = "bcdfghjklmnpqrstvwxyz".split('') # an array of all consonants in alpha order
 
 def swap_names(given_name)
-  last_first = given_name.split(' ').reverse # returns array of ["last name", "first name"]
-  last_first
+  last_first_array = given_name.split(' ').reverse # returns array of ["last name", "first name"]
+  last_first_array
 end
 
-def split_names(last_name, first_name)
-  last_name_split = last_name.split('')
-  first_name_split = first_name.split('')
-
-  p last_name_split
-  p first_name_split
+def split_names(name_array)
+  name_letters = name_array.split('')
+  name_letters.each { |letter| letter.downcase }
+  p name_letters
 end
+
+def next_vowel
+  # $vowels.include?
+end
+
+
+
 
 def alias_maker(name)
   swap_array = swap_names(name)
-  split_names(swap_array[0], swap_array[1])
+  # last_name_letters = split_names(swap_array[0]). 
+  # first_name_letters = split_names(swap_array[1])
+  next_vowel
 end
 
 alias_maker("Danny Maher")
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
               # def next_vowel(letter)
               #   index = 0
               #   while index < alias_first_letters.length
