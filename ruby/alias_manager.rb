@@ -65,7 +65,7 @@ def next_consonant(letters_array)
 end
 
 
-def alias_maker(name)
+def alias_generator(name)
   swap_array = swap_names(name)
 
   last_name_letters = split_names(swap_array[0]) 
@@ -91,62 +91,6 @@ end
 # DRIVER CODE
 
 
-alias_maker("Zanny Muher")
+alias_generator("Zack Button")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#
-              # def next_vowel(letter)
-              #   index = 0
-              #   while index < alias_first_letters.length
-              #     if vowels.include?(alias_first_letters[index])
-              #       alias_first_letters[index] = vowels.index(alias_first_letters[index])
-              #     else
-              #     end
-              #   end
-              #   index += 1
-              #   alias_first_letters[index]
-              # end
-
-
-
-              #   last_first = swap_names(first_last)
-
-              #   alias_first_letters = last_first[0].split('')
-
-              #   alias_last_letters = last_first[1].split('')
-
-              # def alias_maker(first_last)
-              #   index = 0
-              #   alias_first_letters.each do |letter|
-              #     letter = letter.downcase
-              #     p next_vowel(letter)
-              #   end
-
-              #   alias_last_letters.each do |letter|
-              #     letter = letter.downcase
-              #     if vowels.include?(letter)
-              #       p letter
-              #     elsif consonants.include?(letter)
-              #       p letter
-              #     end
-              #   end
-                
-              # end
