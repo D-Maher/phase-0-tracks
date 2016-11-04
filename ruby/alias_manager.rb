@@ -36,19 +36,21 @@ def split_names(name_string) # WORKS!
   name_letters
 end
 
-# def next_vowel(letters_array) # WORKS!
-#   index = 0
-#   while index < letters_array.length
-#     if letters_array[index] == "u"
-#       letters_array[index] = "a"
-#     elsif $vowels.include?(letters_array[index]) # if letter is a vowel
-#       vowel_index = $vowels.index(letters_array[index])
-#       letters_array[index] = $vowels[vowel_index.next]
-#       letters_array
-#     end
-#     index += 1
-#   end
-# end
+def next_vowel(letters_array) # WORKS!
+  index = 0
+  while index < letters_array.length
+    if letters_array[index] == "u"
+      letters_array[index] = "a"
+    elsif $vowels.include?(letters_array[index]) # if letter is a vowel
+      vowel_index = $vowels.index(letters_array[index])
+      letters_array[index] = $vowels[vowel_index.next]
+    end
+    index += 1
+  end
+  letters_array
+end
+
+p next_vowel("danny".split(''))
 
 # def next_consonant(letters_array) # WORKS!
 #   index = 0
