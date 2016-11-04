@@ -13,17 +13,16 @@
 
 def search_array(array, integer)
   index = 0
-  while index < array.length
-    if array.include?(integer)
+  array.each do |int|
+    if array.include?(int)
       index
     else
       nil
     end
     index += 1
   end
-  index 
 end
 
-array_for_search = [2, 7, 55, 13, 24, 17, 9]
+test_array = [2, 7, 55, 13, 24, 17, 9]
 
-p search_array(array_for_search, 24)
+p search_array(test_array, 24)
