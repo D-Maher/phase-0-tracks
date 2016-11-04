@@ -27,12 +27,14 @@ $consonants = "bcdfghjklmnpqrstvwxyz".split('') # an array of all consonants in 
 
 def swap_names(given_name) # WORKS!
   last_first_array = given_name.split(' ').reverse # returns array of ["last name", "first name"]
+
   last_first_array
 end
 
 def split_names(name_string) # WORKS!
   name_letters = name_string.split('')
   name_letters.map! { |letter| letter.downcase }
+
   name_letters
 end
 
@@ -47,6 +49,7 @@ def next_vowel(letters_array) # WORKS!
     end
     index += 1
   end
+
   letters_array
 end
 
@@ -61,6 +64,7 @@ def next_consonant(letters_array) # WORKS!
     end
     index += 1
   end
+
   letters_array
 end
 
@@ -88,9 +92,6 @@ def alias_generator(name) # WORKS!
     next_consonant(name_letters)
 
     alias_name = name_letters.join.capitalize
-
-  else
-    puts "Please enter a valid name!"
   end
 
   alias_name
@@ -108,11 +109,13 @@ until name == "quit"
   name = gets.chomp
   if name == "quit"
     break
+  elsif name == ""
+    puts "Please enter a valid name!"
   else
     secret_alias = alias_generator(name)
+    alias_list[name.to_sym] = secret_alias
+    puts "#{name}'s secret alias is #{secret_alias}."
   end
-  alias_list[name.to_sym] = secret_alias
-  puts "#{name}'s secret alias is #{secret_alias}."
 end
 
 puts "Below is a list of entered agents and their respective aliases:"
