@@ -15,7 +15,12 @@
 
   #------------------------------------------------------------------
 
+
+
+
 # In all code below, first_name represents the REAL first name of the agent, and last_name represents the REAL last name of the agent.
+
+# BUSINESS LOGIC
 
 $vowels = "aeiou".split('') # an array of all vowels in alpha order
 $consonants = "bcdfghjklmnpqrstvwxyz".split('') # an array of all consonants in alpha order
@@ -27,7 +32,7 @@ end
 
 def split_names(name_string) # WORKS!
   name_letters = name_string.split('')
-  name_letters.each { |letter| letter.downcase }
+  name_letters.map! { |letter| letter.downcase }
   name_letters
 end
 
@@ -72,10 +77,15 @@ def alias_maker(name)
   last_name_letters
   first_name_letters
 
-  alias_name = last_name_letters.join + " " + first_name_letters.join
+  alias_name = last_name_letters.join.capitalize + " " + first_name_letters.join.capitalize
 
-  alias_name
+  puts alias_name
 end
+
+
+
+# DRIVER CODE
+
 
 alias_maker("Danny Maher")
 
