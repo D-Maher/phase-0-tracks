@@ -104,7 +104,7 @@ alias_list = {}
 name = nil
 
 until name == "quit"
-  puts "Hello there and welcome to the Alias Generator! Please enter a first name and a last name to generate an alias!" 
+  puts "Hello there and welcome to the Alias Generator! Please enter a name to generate an alias!" 
   puts "Otherwise, type 'quit' to exit the Alias Generator."
   name = gets.chomp
   if name == "quit"
