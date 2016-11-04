@@ -39,7 +39,9 @@ end
 def next_vowel(letters_array) # WORKS!
   index = 0
   while index < letters_array.length
-    if $vowels.include?(letters_array[index]) # if letter is a vowel
+    if letters_array[index] == "u"
+      letters_array[index] = "a"
+    elsif $vowels.include?(letters_array[index]) # if letter is a vowel
       vowel_index = $vowels.index(letters_array[index])
       letters_array[index] = $vowels[vowel_index.next]
       letters_array
@@ -51,7 +53,9 @@ end
 def next_consonant(letters_array)
   index = 0
   while index < letters_array.length
-    if $consonants.include?(letters_array[index]) # if letter is a consonant
+    if letters_array[index] == "z"
+      letters_array[index] = "b"
+    elsif $consonants.include?(letters_array[index]) # if letter is a consonant
       consonant_index = $consonants.index(letters_array[index])
       letters_array[index] = $consonants[consonant_index.next]
       letters_array
@@ -87,7 +91,7 @@ end
 # DRIVER CODE
 
 
-alias_maker("Danny Maher")
+alias_maker("Zanny Muher")
 
 
 
