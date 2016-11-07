@@ -16,6 +16,8 @@
       # method "looks" at first two items in the array...
         # if the first item is greater than the second, the method swaps the position of those items
         # otherwise, method moves on and looks at second and third items in the array and does the same comparison, swapping if necessary
+      # continue swapping until all integers have been sorted from lowest to highest in the array
+    # return sorted array
 
 # --------------------------------------------------------------------
 
@@ -33,9 +35,9 @@ def search_array(array, integer)
   end
 end
 
-# test_array = [2, 7, 55, 13, 24, 17, 9]
+test_array = [2, 7, 55, 13, 24, 17, 9]
 
-# search_array(test_array, 24)
+search_array(test_array, 24)
 
 
 # Release 1
@@ -50,9 +52,9 @@ def fib_calc(number)
   p fib_array
 end
 
-# fib_calc(6)
+fib_calc(6)
 
-# fib_calc(100)
+fib_calc(100)
 
 
 # Release 2
@@ -66,7 +68,7 @@ def bubble_sort(int_array)
         swapped = true
       end
     end
-    
+
     if swapped == false
       break
     end
