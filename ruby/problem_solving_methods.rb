@@ -7,9 +7,14 @@
       # i.e. if array 
     # Otherwise return 'nil'
 
+  # Fibonacci calculator method
+    # takes a number of Fib. terms to generate and returns array of those terms
+    # for a given "current" number in the array (at current index), add the number directly before the current number (at current index - 1) to get the next number in the array (at current index + 1)
 
 
 # --------------------------------------------------------------------
+
+# Release 0
 
 def search_array(array, integer)
   index = 0
@@ -26,3 +31,8 @@ end
 test_array = [2, 7, 55, 13, 24, 17, 9]
 
 search_array(test_array, 5)
+
+
+# Release 1
+
+def fib(number)
