@@ -57,3 +57,15 @@ fib_calc(100)
 
 # Release 2
 
+def bubble_sort(int_array)
+  index = 0
+  while index < int_array.length
+    if int_array[index] > int_array[index + 1]
+      int_array[index], int_array[index + 1] = int_array[index + 1], int_array[index]
+    end
+    index += 1
+  end
+  int_array
+end
+
+bubble_array = [4, 99, 33, 2, 3, 555, 90, 24]
