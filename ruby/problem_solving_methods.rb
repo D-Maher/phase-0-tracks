@@ -10,6 +10,7 @@
   # Fibonacci calculator method
     # takes a number of Fib. terms to generate and returns array of those terms
     # for a given "current" number in the array (at current index), add the number directly before the current number (at current index - 1) to get the next number in the array (at current index + 1)
+    # start fib_array with 0 and 1 as the first two terms
 
 
 # --------------------------------------------------------------------
@@ -30,24 +31,22 @@ end
 
 test_array = [2, 7, 55, 13, 24, 17, 9]
 
-search_array(test_array, 5)
+search_array(test_array, 24)
 
 
 # Release 1
 
-fib_array = []
 
-def fib(number)
-  index = 0
-  while index < fib_array.length
-    if index == 0
-      fib_array[0] = 0
-    elsif index == 1
-      fib_array[1] = 1
-    else
-      fib_array[index] = fib_array[index - 1] + fib_array[index - 2]
-    end
+def fib_calc(number)
+  fib_array = [0, 1]
+  index = 2
+  while index < number
+    fib_array << fib_array[index - 1] + fib_array[index - 2]
     index += 1
   end
-  fib_array
+  p fib_array
 end
+
+fib_calc(6)
+
+fib_calc(100)
