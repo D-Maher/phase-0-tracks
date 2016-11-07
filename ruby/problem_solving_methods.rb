@@ -60,16 +60,16 @@ fib_calc(100)
 # Release 2
 
 def bubble_sort(int_array)
-  loop do
+  loop do # algorithm continues until there is no need to swap integers anymore (i.e. swapped is equal to 'false')
     swapped = false
-    (int_array.length - 1).times do |index|
+    (int_array.length - 1).times do |index| # it's '(int_array.length - 1).times' because the number of integer pairs in the array is always one less than the total number of integers in the array
       if int_array[index] > int_array[index + 1]
         int_array[index], int_array[index + 1] = int_array[index + 1], int_array[index]
-        swapped = true
+        swapped = true # if the 'if' statement code is run, 'swapped' becomes 'true'
       end
     end
 
-    if swapped == false
+    if swapped == false # i.e. 'swapped' REMAINS 'false' because the 'if' statement was not run
       break
     end
   end
