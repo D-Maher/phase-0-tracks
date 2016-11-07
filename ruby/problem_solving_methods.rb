@@ -1,5 +1,3 @@
-# RELEASE 0
-
 # PSEUDOCODE
 
   # Search method that takes an array of integers and an integer to search for within that array
@@ -10,8 +8,14 @@
   # Fibonacci calculator method
     # takes a number of Fib. terms to generate and returns array of those terms
     # for a given "current" number in the array (at current index), add the number directly before the current number (at current index - 1) to get the next number in the array (at current index + 1)
-    # start fib_array with 0 and 1 as the first two terms
+    # start fib_array with 0 and 1 as the first two items
 
+  # bubble sort method
+    # method takes an array of integers
+    # method sorts integers using the following algorithm:
+      # method "looks" at first two items in the array...
+        # if the first item is greater than the second, the method swaps the position of those items
+        # otherwise, method moves on and looks at second and third items in the array and does the same comparison, swapping if necessary
 
 # --------------------------------------------------------------------
 
@@ -36,7 +40,6 @@ search_array(test_array, 24)
 
 # Release 1
 
-
 def fib_calc(number)
   fib_array = [0, 1]
   index = 2
@@ -50,3 +53,7 @@ end
 fib_calc(6)
 
 fib_calc(100)
+
+
+# Release 2
+
