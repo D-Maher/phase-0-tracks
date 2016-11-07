@@ -33,9 +33,9 @@ def search_array(array, integer)
   end
 end
 
-test_array = [2, 7, 55, 13, 24, 17, 9]
+# test_array = [2, 7, 55, 13, 24, 17, 9]
 
-search_array(test_array, 24)
+# search_array(test_array, 24)
 
 
 # Release 1
@@ -50,22 +50,32 @@ def fib_calc(number)
   p fib_array
 end
 
-fib_calc(6)
+# fib_calc(6)
 
-fib_calc(100)
+# fib_calc(100)
 
 
 # Release 2
 
 def bubble_sort(int_array)
-  index = 0
-  while index < int_array.length
-    if int_array[index] > int_array[index + 1]
-      int_array[index], int_array[index + 1] = int_array[index + 1], int_array[index]
+  loop do
+    swapped = false
+    (int_array.length - 1).times do |index|
+      if int_array[index] > int_array[index + 1]
+        int_array[index], int_array[index + 1] = int_array[index + 1], int_array[index]
+        swapped = true
+      end
     end
-    index += 1
+    
+    if swapped == false
+      break
+    end
   end
-  int_array
+  p int_array
 end
 
 bubble_array = [4, 99, 33, 2, 3, 555, 90, 24]
+
+p bubble_array
+
+bubble_sort(bubble_array)
