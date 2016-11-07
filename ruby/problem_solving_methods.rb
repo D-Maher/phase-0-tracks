@@ -35,4 +35,19 @@ search_array(test_array, 5)
 
 # Release 1
 
+fib_array = []
+
 def fib(number)
+  index = 0
+  while index < fib_array.length
+    if index == 0
+      fib_array[0] = 0
+    elsif index == 1
+      fib_array[1] = 1
+    else
+      fib_array[index] = fib_array[index - 1] + fib_array[index - 2]
+    end
+    index += 1
+  end
+  fib_array
+end
