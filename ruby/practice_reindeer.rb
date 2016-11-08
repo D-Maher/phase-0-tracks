@@ -19,6 +19,7 @@ class Reindeer
 
   def land(location)
     puts "Landed safely in #{location}."
+    @location = location # this updates the location of the reindeer from the default, "the North Pole", to a new location that is passed into the method 'land' as an argument
   end
 
 end
@@ -40,4 +41,4 @@ reindeer.land("London")
 # GENERAL COMMENTS
 
 # It is common to declare instance variables (attributes) inside 'initialize' (though it can be done in any method)
-  # Usually, the initialize method takes a few arguments of the attributes that are desired and then they are initialized inside the body of that method 'initialize'
+  # Usually, the initialize method takes a few arguments of the attributes that are desired, and then they are initialized inside the body of that method 'initialize'
