@@ -33,10 +33,10 @@ end
 # DRIVER CODE
 
 reindeer = Reindeer.new("Blitzen")
-reinder.about
+reindeer.about # before attribute changes
 reindeer.take_off(3000)
 reindeer.land("Dublin")
-reindeer.about
+reindeer.about # after attribute changes
 
 reindeer = Reindeer.new("Rudolph")
 reindeer.about
