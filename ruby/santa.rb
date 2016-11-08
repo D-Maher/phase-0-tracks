@@ -14,6 +14,7 @@ class Santa
 
 end
 
+# Santa class test code
 santa_1 = Santa.new
 
 santa_1.speak
