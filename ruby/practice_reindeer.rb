@@ -14,3 +14,7 @@ class Reindeer
   end
 
 end
+
+reindeer = Reindeer.new
+reindeer.take_off(3000)
+reindeer.land("Dublin")
