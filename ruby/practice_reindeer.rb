@@ -4,6 +4,11 @@
 
 class Reindeer
 
+  def initialize
+    @name = "Rudolph"
+    @location = "the North Pole"
+  end
+
   def take_off(altitude)
     puts "Took off."
     puts "Ascended to #{altitude} feet."
