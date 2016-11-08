@@ -9,7 +9,18 @@ class Puppy
     integer.times { puts "Woof!" }
   end
 
+  def roll_over
+    puts "*rolls over*"
+  end
+    
+  def dog_years(human_years)
+    dog_years = human_years * 7
+    p dog_years
+  end
 
+  def play_dead(minutes)
+    puts "The puppy played dead for #{minutes} minutes."
+  end
 
 end
 
@@ -19,3 +30,6 @@ rufus = Puppy.new
 
 rufus.fetch("ball")
 rufus.speak(3)
+rufus.roll_over
+rufus.dog_years(7)
+rufus.play_dead(5)
