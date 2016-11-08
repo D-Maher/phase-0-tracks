@@ -22,20 +22,27 @@ class Reindeer
     @location = location # this updates the location of the reindeer from the default, "the North Pole", to a new location that is passed into the method 'land' as an argument
   end
 
+  def about
+    puts "Name: #{@name}"
+    puts "Location: #{@location}"
+  end
+
 end
 
 
 # DRIVER CODE
 
 reindeer = Reindeer.new("Blitzen")
+reinder.about
 reindeer.take_off(3000)
 reindeer.land("Dublin")
-
+reindeer.about
 
 reindeer = Reindeer.new("Rudolph")
+reindeer.about
 reindeer.take_off(3000)
 reindeer.land("London")
-
+reindeer.about
 
 
 # GENERAL COMMENTS
