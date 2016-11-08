@@ -28,6 +28,25 @@ class Puppy
 
 end
 
+
+class Programmer
+
+  def initialize
+    puts "Initializing new programmer instance..."
+  end
+
+  def panic(minutes)
+    puts "Programmer panicked for #{minutes} minutes."
+  end
+
+  def grab_snack(snack)
+    puts "Programmer grabbed #{snack} to eat."
+  end
+
+end
+
+
+
 # Driver code
 
 rufus = Puppy.new
