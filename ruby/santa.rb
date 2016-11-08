@@ -17,8 +17,24 @@ class Santa
 
 end
 
-# Santa class test code
-santa_1 = Santa.new
 
-santa_1.speak
-santa_1.eat_milk_and_cookies("chocolate chip")
+# DRIVER CODE
+
+# Santa class test code
+  # santa_1 = Santa.new
+
+  # santa_1.speak
+  # santa_1.eat_milk_and_cookies("chocolate chip")
+
+
+santas = []
+
+santas << Santa.new("agender", "black")
+santas << Santa.new("female", "Latino")
+santas << Santa.new("bigender", "white")
+santas << Santa.new("male", "Japanese")
+santas << Santa.new("female", "prefer not to say")
+santas << Santa.new("gender fluid", "Mystical creature (unicorn)")
+santas << Santa.new("N/A", "N/A")
+
+p santas
