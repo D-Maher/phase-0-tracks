@@ -23,3 +23,8 @@ end
 reindeer = Reindeer.new("Blitzen")
 reindeer.take_off(3000)
 reindeer.land("Dublin")
+
+
+reindeer = Reindeer.new("Rudolph")
+reindeer.take_off(3000)
+reindeer.land("Dublin")
