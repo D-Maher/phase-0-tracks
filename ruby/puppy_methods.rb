@@ -56,3 +56,18 @@ rufus.speak(3)
 rufus.roll_over
 rufus.dog_years(7)
 rufus.play_dead(5)
+
+
+programmer_array = []
+
+50.times do
+  programmer_instance = Programmer.new
+  programmer_array << programmer_instance
+  # programmer_instance.panic(60)
+  # programmer_instance.grab_snack("Cheezits")
+end
+
+programmer_array.each do |programmer|
+  programmer.panic(10)
+  programmer.grab_snack("cookies")
+end
