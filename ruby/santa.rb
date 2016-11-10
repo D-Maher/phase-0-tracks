@@ -46,8 +46,7 @@ end
 
   santas = []
 
-  50.times do
-    santas << Santa.new(genders.sample, ethnicities.sample)
+  4.times do
+    santas << Santa.new(genders.sample, ethnicities.sample) # '.sample' selects a random item from the array it is called on
   end
 
-  p santas
