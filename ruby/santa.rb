@@ -15,16 +15,23 @@ class Santa
     puts "That was a good #{cookie_type} cookie!"
   end
 
+  # attribute-changing methods
+  def celebrate_birthday
+    @age += 1
+    @age
+  end
+
 end
 
 
 # DRIVER CODE
 
 # Santa class test code
-  # santa_1 = Santa.new
+  santa_1 = Santa.new("agender", "black")
 
-  # santa_1.speak
-  # santa_1.eat_milk_and_cookies("chocolate chip")
+  santa_1.speak
+  santa_1.eat_milk_and_cookies("chocolate chip")
+  santa_1.celebrate_birthday
 
 # Adding different instances of Santa to a 'santas' array
   # santas = []
@@ -39,6 +46,7 @@ end
 
   # p santas 
 
+
 # Refactoring adding Santa instances to 'santas' array
   genders = ["agender", "female", "bigender", "male", "gender fluid", "N/A"]
 
@@ -49,4 +57,5 @@ end
   4.times do
     santas << Santa.new(genders.sample, ethnicities.sample) # '.sample' selects a random item from the array it is called on
   end
+
 
