@@ -24,9 +24,9 @@ end
 
 # DRIVER CODE
 
-todolist = TodoList.new(["do the dishes", "mow the lawn"])
+  # todolist = TodoList.new(["do the dishes", "mow the lawn"])
 
-todolist.get_items
-todolist.add_item("mop")
-todolist.delete_item("do the dishes")
-p todolist.get_item(0)
+  # todolist.get_items
+  # todolist.add_item("mop")
+  # todolist.delete_item("do the dishes")
+  # p todolist.get_item(0)
