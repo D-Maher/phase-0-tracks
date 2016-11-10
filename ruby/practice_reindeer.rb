@@ -34,7 +34,7 @@ class Reindeer
   end
 
   def location # getter for 'location'
-    @name # simply returns instance variable '@location'
+    @location # simply returns instance variable '@location'
   end
 
   # setter method
