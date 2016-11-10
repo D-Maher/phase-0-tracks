@@ -43,3 +43,11 @@ end
   genders = ["agender", "female", "bigender", "male", "gender fluid", "N/A"]
 
   ethnicities = ["black", "Latino", "white", "Japanese-African", "Samoan", "prefer not to say", "N/A", "Australian", "Native American"]
+
+  santas = []
+
+  50.times do
+    santas << Santa.new(genders.sample, ethnicities.sample)
+  end
+
+  p santas
