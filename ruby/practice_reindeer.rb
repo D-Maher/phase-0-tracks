@@ -27,6 +27,14 @@ class Reindeer
     puts "Location: #{@location}"
   end
 
+  def name # getter for 'name'
+    @name # simply returns instance variable '@name'
+  end
+
+  def location # getter for 'location'
+    @name # simply returns instance variable '@location'
+  end
+
 end
 
 
