@@ -59,7 +59,7 @@ end
   # p santa_1.age
   # p santa_1.ethnicity
 
-# Adding different instances of Santa to a 'santas' array
+# Adding different instances of Santa to a 'santas' array (refactored below)
   # santas = []
 
   # santas << Santa.new("agender", "black")
@@ -73,21 +73,22 @@ end
   # p santas 
 
 
-# Refactoring adding Santa instances to 'santas' array
   genders = ["agender", "female", "bigender", "male", "gender fluid", "N/A"]
 
   ethnicities = ["black", "Latino", "white", "Japanese-African", "Samoan", "prefer not to say", "N/A", "Australian", "Native American", "extraterrestrial"]
 
   santas = []
 
-  4.times do
+  santa_instance = 1
+
+  10.times do
     santa = Santa.new(genders.sample, ethnicities.sample) # '.sample' selects a random item from the array it is called on
-    santa_instance = 1
     santa.age = (1..140).to_a.sample
-    puts "Here comes Santa Claus, ##{santa_instance}."
-    p santa.gender
-    p santa.ethnicity
-    p santa.age
+    puts "Here comes Santa Claus ##{santa_instance}!:"
+    puts "Gender: #{santa.gender}"
+    puts "Ethnicity: #{santa.ethnicity}"
+    puts "Age: #{santa.age}"
+    puts
     santas << santa 
     santa_instance += 1
   end
