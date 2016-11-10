@@ -12,6 +12,20 @@ class Reindeer
     @location = "the North Pole" # same with this instance variable # we leave "the North Pole" as the reindeer's default location, which we can update later in the code
   end
 
+  # getter methods for attributes
+  def name # getter for 'name'
+    @name # simply returns instance variable '@name'
+  end
+
+  def location # getter for 'location'
+    @location # simply returns instance variable '@location'
+  end
+
+  # setter method
+  def name=(new_name)
+    @name = new_name
+  end
+
   def take_off(altitude)
     puts "#{@name} took off." # this method take_off "knows" about the variable @name because it is an instance variable
     puts "#{@name} ascended to #{altitude} feet."
@@ -25,21 +39,6 @@ class Reindeer
   def about 
     puts "Name: #{@name}"
     puts "Location: #{@location}"
-  end
-
-
-  # getter methods for attributes
-  def name # getter for 'name'
-    @name # simply returns instance variable '@name'
-  end
-
-  def location # getter for 'location'
-    @location # simply returns instance variable '@location'
-  end
-
-  # setter method
-  def name=(new_name)
-    @name = new_name
   end
 
 end
