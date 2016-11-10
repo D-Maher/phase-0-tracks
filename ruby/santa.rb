@@ -26,6 +26,15 @@ class Santa
     @reindeer_ranking << reindeer
   end
 
+  # getter methods
+  def age
+    @age
+  end
+
+  def ethnicity
+    @ethnicity
+  end
+
   # setter method
   def gender=(new_gender)
     @gender = new_gender
@@ -45,6 +54,8 @@ end
   santa_1.celebrate_birthday
   santa_1.get_mad_at("Cupid")
   santa_1.gender = "undecided"
+  p santa_1.age
+  p santa_1.ethnicity
 
 # Adding different instances of Santa to a 'santas' array
   # santas = []
@@ -70,5 +81,3 @@ end
   4.times do
     santas << Santa.new(genders.sample, ethnicities.sample) # '.sample' selects a random item from the array it is called on
   end
-
-
