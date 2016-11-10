@@ -1,6 +1,6 @@
 class Santa
-  attr_reader :age, :ethnicity
-  attr_accessor :gender
+  attr_reader :ethnicity
+  attr_accessor :gender, :age
 
   def initialize(gender, ethnicity)
     @gender = gender
@@ -49,15 +49,15 @@ end
 # DRIVER CODE
 
 # Santa class test code
-  santa_1 = Santa.new("agender", "black")
+  # santa_1 = Santa.new("agender", "black")
 
-  santa_1.speak
-  santa_1.eat_milk_and_cookies("chocolate chip")
-  santa_1.celebrate_birthday
-  p santa_1.get_mad_at("Cupid")
-  p santa_1.gender = "undecided"
-  p santa_1.age
-  p santa_1.ethnicity
+  # santa_1.speak
+  # santa_1.eat_milk_and_cookies("chocolate chip")
+  # santa_1.celebrate_birthday
+  # p santa_1.get_mad_at("Cupid")
+  # p santa_1.gender = "undecided"
+  # p santa_1.age
+  # p santa_1.ethnicity
 
 # Adding different instances of Santa to a 'santas' array
   # santas = []
@@ -76,10 +76,18 @@ end
 # Refactoring adding Santa instances to 'santas' array
   genders = ["agender", "female", "bigender", "male", "gender fluid", "N/A"]
 
-  ethnicities = ["black", "Latino", "white", "Japanese-African", "Samoan", "prefer not to say", "N/A", "Australian", "Native American"]
+  ethnicities = ["black", "Latino", "white", "Japanese-African", "Samoan", "prefer not to say", "N/A", "Australian", "Native American", "extraterrestrial"]
 
   santas = []
 
   4.times do
-    santas << Santa.new(genders.sample, ethnicities.sample) # '.sample' selects a random item from the array it is called on
+    santa = Santa.new(genders.sample, ethnicities.sample) # '.sample' selects a random item from the array it is called on
+    santa_instance = 1
+    santa.age = (1..140).to_a.sample
+    puts "Here comes Santa Claus, ##{santa_instance}."
+    p santa.gender
+    p santa.ethnicity
+    p santa.age
+    santas << santa 
+    santa_instance += 1
   end
