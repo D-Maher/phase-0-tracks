@@ -26,6 +26,12 @@ class Santa
     @reindeer_ranking << reindeer
   end
 
+  # setter method
+  def gender=(new_gender)
+    @gender = new_gender
+    @gender
+  end
+
 end
 
 
@@ -37,7 +43,8 @@ end
   santa_1.speak
   santa_1.eat_milk_and_cookies("chocolate chip")
   santa_1.celebrate_birthday
-  p santa_1.get_mad_at("Cupid")
+  santa_1.get_mad_at("Cupid")
+  santa_1.gender = "undecided"
 
 # Adding different instances of Santa to a 'santas' array
   # santas = []
