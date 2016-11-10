@@ -32,17 +32,23 @@ end
 
 # DRIVER CODE
 
-reindeer = Reindeer.new("Blitzen")
-reindeer.about # before attribute changes
-reindeer.take_off(3000)
-reindeer.land("Dublin")
-reindeer.about # after attribute changes
+    # reindeer = Reindeer.new("Blitzen")
+    # reindeer.about # before attribute changes
+    # reindeer.take_off(3000)
+    # reindeer.land("Dublin")
+    # reindeer.about # after attribute changes
 
-reindeer = Reindeer.new("Rudolph")
-reindeer.about
+    # reindeer = Reindeer.new("Rudolph")
+    # reindeer.about
+    # reindeer.take_off(3000)
+    # reindeer.land("London")
+    # reindeer.about
+
+reindeer = Reindeer.new("Dasher")
+puts "#{reindeer.name} is in #{reindeer.location}."
 reindeer.take_off(3000)
-reindeer.land("London")
-reindeer.about
+reindeer.land("Cape Town")
+
 
 
 # GENERAL COMMENTS
