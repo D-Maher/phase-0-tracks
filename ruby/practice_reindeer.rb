@@ -22,17 +22,24 @@ class Reindeer
     @location = location # this updates the location of the reindeer from the default, "the North Pole", to a new location that is passed into the method 'land' as an argument
   end
 
-  def about
+  def about 
     puts "Name: #{@name}"
     puts "Location: #{@location}"
   end
 
+
+  # getter methods for attributes
   def name # getter for 'name'
     @name # simply returns instance variable '@name'
   end
 
   def location # getter for 'location'
     @name # simply returns instance variable '@location'
+  end
+
+  # setter method
+  def name=(new_name)
+    @name = new_name
   end
 
 end
@@ -55,7 +62,10 @@ end
 reindeer = Reindeer.new("Dasher")
 puts "#{reindeer.name} is in #{reindeer.location}."
 reindeer.take_off(3000)
+reindeer.name = "The Reindeer Formerly Known as Dasher"
 reindeer.land("Cape Town")
+puts "#{reindeer.name} is in #{reindeer.location}."
+
 
 
 
