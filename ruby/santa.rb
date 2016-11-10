@@ -1,4 +1,6 @@
 class Santa
+  attr_reader :age, :ethnicity
+  attr_accessor :gender
 
   def initialize(gender, ethnicity)
     @gender = gender
@@ -26,20 +28,20 @@ class Santa
     @reindeer_ranking << reindeer
   end
 
-  # getter methods
-  def age
-    @age
-  end
+  # getter methods (refactored with attr_reader)
+    # def age
+    #   @age
+    # end
 
-  def ethnicity
-    @ethnicity
-  end
+    # def ethnicity
+    #   @ethnicity
+    # end
 
-  # setter method
-  def gender=(new_gender)
-    @gender = new_gender
-    @gender
-  end
+  # setter method (refactored with attr_accessor)
+    # def gender=(new_gender)
+    #   @gender = new_gender
+    #   @gender
+    # end
 
 end
 
@@ -52,8 +54,8 @@ end
   santa_1.speak
   santa_1.eat_milk_and_cookies("chocolate chip")
   santa_1.celebrate_birthday
-  santa_1.get_mad_at("Cupid")
-  santa_1.gender = "undecided"
+  p santa_1.get_mad_at("Cupid")
+  p santa_1.gender = "undecided"
   p santa_1.age
   p santa_1.ethnicity
 
