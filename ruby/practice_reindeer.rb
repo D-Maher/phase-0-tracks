@@ -6,20 +6,22 @@
 # BUSINESS LOGIC
 
 class Reindeer
+  attr_reader :name, :location 
+
 
   def initialize(name) # initialize method now takes a parameter 'name'
     @name = name # this instance variable's data is accessible to any instance methods of the Reindeer class
     @location = "the North Pole" # same with this instance variable # we leave "the North Pole" as the reindeer's default location, which we can update later in the code
   end
 
-  # getter methods for attributes
-  def name # getter for 'name'
-    @name # simply returns instance variable '@name'
-  end
+  # getter methods for attributes (no longer necessary with attr_reader)
+    # def name # getter for 'name'
+    #   @name # simply returns instance variable '@name'
+    # end
 
-  def location # getter for 'location'
-    @location # simply returns instance variable '@location'
-  end
+    # def location # getter for 'location'
+    #   @location # simply returns instance variable '@location'
+    # end
 
   # setter method
   def name=(new_name)
@@ -61,8 +63,8 @@ end
 reindeer = Reindeer.new("Dasher")
 puts "#{reindeer.name} is in #{reindeer.location}."
 reindeer.take_off(3000)
-reindeer.name = "The Reindeer Formerly Known as Dasher"
 reindeer.land("Cape Town")
+reindeer.name = "The Reindeer Formerly Known as Dasher"
 puts "#{reindeer.name} is in #{reindeer.location}."
 
 
