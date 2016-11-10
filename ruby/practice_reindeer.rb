@@ -6,7 +6,8 @@
 # BUSINESS LOGIC
 
 class Reindeer
-  attr_reader :name, :location 
+  attr_reader :location
+  attr_accessor :name 
 
 
   def initialize(name) # initialize method now takes a parameter 'name'
@@ -23,10 +24,10 @@ class Reindeer
     #   @location # simply returns instance variable '@location'
     # end
 
-  # setter method
-  def name=(new_name)
-    @name = new_name
-  end
+  # setter method (no longer necessary with attr_accessor)
+    # def name=(new_name)
+    #   @name = new_name
+    # end
 
   def take_off(altitude)
     puts "#{@name} took off." # this method take_off "knows" about the variable @name because it is an instance variable
