@@ -26,15 +26,20 @@ end
   # santa_1.speak
   # santa_1.eat_milk_and_cookies("chocolate chip")
 
+# Adding different instances of Santa to a 'santas' array
+  # santas = []
 
-santas = []
+  # santas << Santa.new("agender", "black")
+  # santas << Santa.new("female", "Latino")
+  # santas << Santa.new("bigender", "white")
+  # santas << Santa.new("male", "Japanese")
+  # santas << Santa.new("female", "prefer not to say")
+  # santas << Santa.new("gender fluid", "Mystical creature (unicorn)")
+  # santas << Santa.new("N/A", "N/A")
 
-santas << Santa.new("agender", "black")
-santas << Santa.new("female", "Latino")
-santas << Santa.new("bigender", "white")
-santas << Santa.new("male", "Japanese")
-santas << Santa.new("female", "prefer not to say")
-santas << Santa.new("gender fluid", "Mystical creature (unicorn)")
-santas << Santa.new("N/A", "N/A")
+  # p santas 
 
-p santas
+# Refactoring adding Santa instances to 'santas' array
+  genders = ["agender", "female", "bigender", "male", "gender fluid", "N/A"]
+
+  ethnicities = ["black", "Latino", "white", "Japanese-African", "Samoan", "prefer not to say", "N/A", "Australian", "Native American"]
