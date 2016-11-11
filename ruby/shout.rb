@@ -35,3 +35,10 @@ end
 
 # DRIVER CODE
 
+blackhawks_fan = SportsFan.new
+p blackhawks_fan.yell_happily("Go Blackhawks")
+p blackhawks_fan.yell_angrily("Hey ref, that call was utter baloney")
+
+smart_goat = SentientGoat.new
+p smart_goat.yell_happily("Woo, I can talk")
+p smart_goat.yell_angrily("What am I??")
