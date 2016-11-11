@@ -1,3 +1,7 @@
 module Shout
-  # methods to come
+  
+  def self.yell_angrily(words)
+    words + "!!!" + " >:("
+  end
+
 end
