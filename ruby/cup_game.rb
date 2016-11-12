@@ -36,7 +36,7 @@ game.shuffle # calls the instance method 'game.shuffle' (lines 13-15)
 while !game.is_over # while the game is not over... (another way to write this code would be 'while game.is_over == false')
   puts "Which cup has the ball? Enter a guess of 1, 2, or 3:"
   guess = gets.chomp.to_i # asks for user input and converts it to an integer
-  if !game.check_cup(guess - 1) # if the user's guess - 1 does not equal the index of "ball" in the array @cups (i.e. if game.check_cup evaluates to false since the 'if' statement was not met)
+  if !game.check_cup(guess - 1) # if the user's guess - 1 does not equal the index of "ball" in the array @cups (i.e. if game.check_cup evaluates to 'false' (line 22) since the 'if' statement was not met)
     puts "Nope! Try again." # user has not guessed correctly, 'while' loop continues
   end
 end
