@@ -1,0 +1,39 @@
+PSEUDO CODE FOR word_guess.rb
+
+* Declare a class for word guessing game
+
+* Initialize method
+    - readable attributes:
+        + secret word, which is set to nothing
+        + guess count (which will be incremented in subsequent code, but will be limited based on the length of the secret word)
+
+* Method that asks one user for the secret word and stores it in a variable
+    - input: secret word from user
+    - steps: stores that word in an instance variable (that can be read outside the class?)
+    - output: the instance variable
+
+* Method
+    - input:
+    - steps:
+    - output:
+
+* Method
+    - input:
+    - steps:
+    - output:
+
+* Method
+    - input:
+    - steps:
+    - output:
+
+* Method
+    - input:
+    - steps:
+    - output:
+
+* Method
+    - input:
+    - steps:
+    - output:
+
