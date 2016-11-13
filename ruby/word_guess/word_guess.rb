@@ -1,6 +1,6 @@
 class WordGame
   attr_reader
-  attr_accessor :secret_word, :blanks
+  attr_accessor :secret_word, :blanks, :word_progress
 
   def initialize
     @secret_word = nil
@@ -13,11 +13,15 @@ class WordGame
     word_to_guess.split('')
   end
 
-  def blank_array_generator(secret_word_array)
+  def blanks_array_generator(secret_word_array)
     secret_word_array.length.times do 
       @blanks << "_ "
     end
     @blanks
+  end
+
+  def blanks_array_joiner(blanks_array)
+    @word_progress = blanks_array.join
   end
 
 end
@@ -31,5 +35,6 @@ p word_array
 
 p word_array.length
 
-p game.blank_generator(word_array)
+p blanks_array = game.blanks_array_generator(word_array)
 
+p game.blanks_array_joiner(blanks_array)
