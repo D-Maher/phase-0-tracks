@@ -7,5 +7,8 @@ describe WordGame do
     expect(word_game.split_word("dragon")).to eq ["d", "r", "a", "g", "o", "n"]
   end
 
+  it "generates an array of blanks with same length as the secret word letter array" do
+    expect(word_game.blank_generator(["d", "r", "a", "g", "o", "n"])).to eq ["_", "_", "_", "_", "_", "_"]
+  end
 
 end
