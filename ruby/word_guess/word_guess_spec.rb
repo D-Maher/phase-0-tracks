@@ -8,7 +8,7 @@ describe WordGame do
   end
 
   it "generates an array of blanks with same length as the secret word letter array" do
-    expect(word_game.blank_generator(["d", "r", "a", "g", "o", "n"])).to eq ["_", "_", "_", "_", "_", "_"]
+    expect(word_game.blank_array_generator(["d", "r", "a", "g", "o", "n"])).to eq ["_", "_", "_", "_", "_", "_"]
   end
 
 end
