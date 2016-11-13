@@ -7,4 +7,10 @@ class WordGame
     @is_over = false
   end
 
+  def split_word(word_to_guess)
+    word_to_guess.split('')
+  end
+
+
+
 end
