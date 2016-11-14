@@ -1,5 +1,5 @@
 class WordGame
-  attr_reader :word_is_guessed, :guess_count, :secret_word, :blanks, :guesses 
+  attr_reader :word_is_guessed, :guess_count, :blanks 
   attr_accessor :is_over
 
   def initialize
@@ -30,13 +30,16 @@ class WordGame
       puts "Here is your progress so far..."
       puts @blanks.join.rstrip.to_s
       # repeat_guess = true
-    elsif @secret_word_array.include?(guess) # I really, REALLY tried to make this method handle words with two or more of the same letter, but I will have to admit defeat on that... for now...
+    elsif @secret_word_array.include?(guess)
       @guess_count += 1
       @guesses << guess
       puts "Nice! '#{guess}' is in the secret word!"
-      @blanks[@secret_word_array.index(guess)] = guess
-      puts "Here is your progress so far..."
-      puts @blanks.join.rstrip.to_s
+      @secret_indices = @secret_word_array.each_index.select { |i| @secret_word_array[i] == guess }
+      @secret_indices.each do |index|
+        @blanks[index] = guess
+      end
+        puts "Here is your progress so far..."
+        puts @blanks.join.rstrip.to_s
       # good_guess = true
     else 
       @guess_count += 1
@@ -64,11 +67,16 @@ puts "Great! Let's begin."
 puts "Try and guess this secret word:" 
 puts "#{game.blanks.join.rstrip}" 
 
-while !game.is_over && game.guess_count <= game.blanks.length * 2
+guesses_left = (game.blanks.length * 2)
+
+while !game.is_over && game.guess_count < game.blanks.length * 2
   puts "Player 2, please enter a letter to guess. Hit 'enter' once you've filled in all the blanks."
+  puts "You have #{guesses_left} guesses remaining..."
   guess = gets.chomp
 
   game.guess_check(secret_word, guess)
+
+  guesses_left -= 1
 
   if game.word_is_guessed == true
     game.is_over = true
