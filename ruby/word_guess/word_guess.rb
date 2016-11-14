@@ -61,7 +61,7 @@ puts "Welcome to the Word Guesser Game!"
 game = WordGame.new
 
 puts "Player 1, please enter a secret word for Player 2 to guess. Player 2, keep those eyes closed!"
-secret_word = gets.chomp
+secret_word = gets.chomp.downcase
 blanks = game.blanks_array_generator(game.split_word(secret_word))
 
 puts "Great! Let's begin."
@@ -73,7 +73,7 @@ guesses_left = (game.blanks.length * 2)
 while !game.is_over && game.guess_count < game.blanks.length * 2
   puts "Player 2, please enter a letter to guess. Hit 'enter' once you've filled in all the blanks."
   puts "You have #{guesses_left} guesses remaining..."
-  guess = gets.chomp
+  guess = gets.chomp.downcase
 
   game.guess_check(secret_word, guess)
 
