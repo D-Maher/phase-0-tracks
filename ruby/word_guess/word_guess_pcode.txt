@@ -1,0 +1,52 @@
+PSEUDO CODE FOR word_guess.rb
+
+* Declare a class for word guessing game
+
+* Initialize method
+    - readable attributes:
+        + secret word, which is set to nothing
+        + guess count (which will be incremented in subsequent code, but will be limited based on the length of the secret word)
+
+* Method that asks one user for the secret word and converts it to an array of characters, which is stored in a variable
+    - input: secret word from user
+    - steps: 
+        + takes secret word and coverts it to an array
+        + stores that word array in an instance variable (that can be read outside the class?)
+    - output: the instance variable for the secret word
+
+* Method that assesses the number of letters in the secret word and returns an string of blanks with the same length as the secret word
+    - input: secret word array
+    - steps:
+        + declare an empty array (will become array of blanks)
+        + use a loop to add blanks to the blanks array equal to the number of items in the secret word array
+        + join array of blanks into a string
+        + store string of blanks in a variable
+    - output: string of blanks variable
+
+* Method that takes a different user's guess (in the form of a letter) and checks if it is in the secret word array 
+    - input: guessed letter
+    - steps:
+        + if letter guess is an item in the secret word array
+            * insert that guessed letter into the blanks array at the appropriate spot (index of each letter should be the same in both the secret word array and the blanks array)
+            * print to user the string of blanks (now with correct letters revealed)
+            * guess count is incremented by 1
+        + if letter guess has already been guessed by user
+            * print to user that the letter has already been guess
+            * show user the current blanks array (i.e. the user's progress)
+            * do NOT increment guess counter
+        + otherwise...
+            * print to user that the letter does not exist in the secret word
+            * print the progress of guessed word (i.e. most recent string of blanks) to user
+            * guess count is incremented by 1
+    - output: updated string of blanks (with correctly guessed letters revealed)
+
+* Driver code
+    - introductory printed statements to introduce the game and prompt users for all necessary input
+    - loop through game until guess count reaches the predetermined number (most likely will be 2x the length of the secret word)
+    - game outcome
+        + if user guesses word within maximum number of allowed guesses...
+            * print "Congratulations! You guessed the secret word, which was (insert word here)!"
+        + otherwise...
+            * print to the user a nice, ego-deflating taunt
+    
+
