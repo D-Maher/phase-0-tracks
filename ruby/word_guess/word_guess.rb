@@ -26,7 +26,8 @@ class WordGame
     elsif @guesses.include?(guess)
       puts "You already guessed the letter '#{guess}'! Please guess a different letter."
       puts "Here is your progress so far..."
-      p @word_progress = @blanks.join.chop  
+      p @word_progress = @blanks.join.chop
+      repeat_guess = true
     elsif @secret_word_array.include?(guess)
       @guess_count += 1
       @guesses << guess
@@ -34,12 +35,14 @@ class WordGame
       @blanks[@secret_word_array.index(guess)] = guess
       puts "Here is your progress so far..."
       p @word_progress = @blanks.join.chop
+      good_guess = true
     else
       @guess_count += 1
       @guesses << guess
       puts "Aw darn, looks like '#{guess}' is not in the secret word."
       puts "Here is your progress so far..."
       p @word_progress = @blanks.join.chop
+      good_guess = false
     end
   end
 
