@@ -10,7 +10,7 @@ class WordGame
   end
 
   def split_word(word_to_guess)
-    word_to_guess.split('')
+    @secret_word_array = word_to_guess.split('')
   end
 
   def blanks_array_generator(secret_word_array)
@@ -20,9 +20,15 @@ class WordGame
     @blanks
   end
 
-  def blanks_array_joiner(blanks_array)
-    @word_progress = blanks_array.join
+  def guess_check(guess)
+    if @secret_word_array.include?(guess)
+      @blanks[@secret_word_array.index(guess)] = guess
+      p @word_progress = @blanks.join
+    else
+      puts "NOPE"
+    end
   end
+
 
 end
 
@@ -31,10 +37,12 @@ game = WordGame.new
 
 word_array = game.split_word("dragon")
 
+p 
+
 p word_array
 
 p word_array.length
 
 p blanks_array = game.blanks_array_generator(word_array)
 
-p game.blanks_array_joiner(blanks_array)
+game.guess_check("r")
