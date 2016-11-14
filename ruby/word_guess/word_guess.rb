@@ -23,11 +23,12 @@ class WordGame
   def guess_check(secret_word, guess) # could be refactored: each control flow statement could evaluate to simply a boolean, then, in driver code, different statements could be printed depending on those booleans... we'll see
     if guess == secret_word
       @word_is_guessed = true
+      @guess_count += 1
     elsif @blanks.join.rstrip == secret_word
       @word_is_guessed = true
     elsif @guesses.include?(guess)
       puts "You already guessed the letter '#{guess}'! Please guess a different letter."
-      puts "Here is your progress so far..."
+      puts "Here is your progress so far:"
       puts @blanks.join.rstrip.to_s
       # repeat_guess = true
     elsif @secret_word_array.include?(guess)
@@ -38,14 +39,14 @@ class WordGame
       @secret_indices.each do |index|
         @blanks[index] = guess
       end
-        puts "Here is your progress so far..."
+        puts "Here is your progress so far:"
         puts @blanks.join.rstrip.to_s
       # good_guess = true
     else 
       @guess_count += 1
       @guesses << guess
       puts "Aw darn, looks like '#{guess}' is not in the secret word."
-      puts "Here is your progress so far..."
+      puts "Here is your progress so far:"
       puts @blanks.join.rstrip.to_s
       # good_guess = false
     end
@@ -84,8 +85,10 @@ while !game.is_over && game.guess_count < game.blanks.length * 2
     
 end
 
-if game.word_is_guessed == true
-  puts "Congratulations! You correctly guessed that the secret word is '#{secret_word}'!"
+if game.word_is_guessed == true && game.guess_count == 1
+  puts "Congratulations, Player 2! You correctly guessed that the secret word is '#{secret_word}'! It took you #{game.guess_count} guess."
+elsif game.word_is_guessed == true && game.guess_count > 1
+  puts "Congratulations, Player 2! You correctly guessed that the secret word is '#{secret_word}'! It took you #{game.guess_count} guesses."
 else
-  puts "MWAHAHAHAHAHA! You've run out of guesses! Better luck next time, pathetic human."
+  puts "MWAHAHAHAHAHA! You've run out of guesses! Better luck next time, pathetic human. Player 1 wins!"
 end
