@@ -1,5 +1,7 @@
 require_relative 'word_guess'
 
+# Attention: these tests will not run correctly unless the boolean return values of each method in word_guess.rb are un-commented out
+
 describe WordGame do
   let(:word_game) { WordGame.new }
   let(:secret_word) { "dragon" }

@@ -28,26 +28,25 @@ class WordGame
     elsif @guesses.include?(guess)
       puts "You already guessed the letter '#{guess}'! Please guess a different letter."
       puts "Here is your progress so far..."
-      p @blanks.join.rstrip
-      repeat_guess = true
+      puts @blanks.join.rstrip.to_s
+      # repeat_guess = true
     elsif @secret_word_array.include?(guess)
       @guess_count += 1
       @guesses << guess
       puts "Nice! '#{guess}' is in the secret word!"
       @blanks[@secret_word_array.index(guess)] = guess
       puts "Here is your progress so far..."
-      p @blanks.join.rstrip
-      good_guess = true
-    else
+      puts @blanks.join.rstrip.to_s
+      # good_guess = true
+    else 
       @guess_count += 1
       @guesses << guess
       puts "Aw darn, looks like '#{guess}' is not in the secret word."
       puts "Here is your progress so far..."
-      p @blanks.join.rstrip
-      good_guess = false
+      puts @blanks.join.rstrip.to_s
+      # good_guess = false
     end
   end
-
 
 end
 
@@ -61,7 +60,9 @@ puts "Player 1, please enter a secret word for Player 2 to guess. Player 2, keep
 secret_word = gets.chomp
 blanks = game.blanks_array_generator(game.split_word(secret_word))
 
-puts "Great! Let's begin." 
+puts "Great! Let's begin."
+puts "Try and guess this secret word:" 
+puts "#{game.blanks.join.rstrip}" 
 
 while !game.is_over && game.guess_count <= game.blanks.length * 2
   puts "Player 2, please enter a letter to guess. Hit 'enter' once you've filled in all the blanks."
@@ -78,5 +79,5 @@ end
 if game.word_is_guessed == true
   puts "Congratulations! You correctly guessed that the secret word is '#{secret_word}'!"
 else
-  puts "MWAHAHAHAHAHA! You've run out of guesses! Better luck next time, inferior human."
+  puts "MWAHAHAHAHAHA! You've run out of guesses! Better luck next time, pathetic human."
 end
