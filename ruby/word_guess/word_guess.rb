@@ -1,6 +1,6 @@
 class WordGame
-  attr_reader :word_is_guessed, :guess_count
-  attr_accessor :secret_word, :blanks, :guesses, :is_over
+  attr_reader :word_is_guessed, :guess_count, :secret_word, :blanks, :guesses 
+  attr_accessor :is_over
 
   def initialize
     @blanks = []
@@ -30,7 +30,7 @@ class WordGame
       puts "Here is your progress so far..."
       puts @blanks.join.rstrip.to_s
       # repeat_guess = true
-    elsif @secret_word_array.include?(guess)
+    elsif @secret_word_array.include?(guess) # I really, REALLY tried to make this method handle words with two or more of the same letter, but I will have to admit defeat on that... for now...
       @guess_count += 1
       @guesses << guess
       puts "Nice! '#{guess}' is in the secret word!"
