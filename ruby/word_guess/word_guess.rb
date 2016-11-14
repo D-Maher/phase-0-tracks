@@ -45,7 +45,7 @@ class WordGame
     else 
       @guess_count += 1
       @guesses << guess
-      puts "Aw darn, looks like '#{guess}' is not in the secret word."
+      puts "Aw darn, looks like '#{guess}' is not a letter in the secret word."
       puts "Here is your progress so far:"
       puts @blanks.join.rstrip.to_s
       # good_guess = false
