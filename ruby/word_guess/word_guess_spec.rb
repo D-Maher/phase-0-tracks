@@ -12,11 +12,36 @@ describe WordGame do
     expect(word_game.blanks_array_generator(["d", "r", "a", "g", "o", "n"])).to eq ["_ ", "_ ", "_ ", "_ ", "_ ", "_ "]
   end
 
+  it "checks if the user's guess is the secret word" do
+    word_game.instance_variable_set(:@secret_word, "dragon")
+
+    expect(word_game.guess_check("dragon")).to eq true 
+  end
+
+  it "checks if the user's guess is a repeat of a previous guess" do
+    word_game.instance_variable_set(:@guesses, ["r"])
+
+    expect(word_game.guess_check("r")).to eq "_ r_ _ _ _" 
+  end
+
   it "checks if the user's guess (in the form of a letter) exists in the secret word" do
     word_game.instance_variable_set(:@secret_word_array, "dragon".split(''))
-    word_game.instance_variable_get(:@word_progress)
+    word_game.instance_variable_set(:@blanks, ["_ ", "_ ", "_ ", "_ ", "_ ", "_ "])
 
-    expect(word_game.guess_check("d")).to eq "d_ _ _ _ _ "
+    expect(word_game.guess_check("r")).to eq "_ r_ _ _ _" 
   end
+
+  it "checks if the user's guess (in the form of a letter) does not exist in the secret word" do
+    word_game.instance_variable_set(:@secret_word_array, "dragon".split(''))
+    word_game.instance_variable_set(:@blanks, ["_ ", "_ ", "_ ", "_ ", "_ ", "_ "])
+
+    expect(word_game.guess_check("r")).to eq "_ r_ _ _ _" 
+  end
+
+
+
+  
+
+
 
 end
