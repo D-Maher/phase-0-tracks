@@ -15,4 +15,6 @@ function reverse(string) {
   console.log(reversedString);
 }
 
-reverse("hello")
+if ("hello".length == 5) {
+  reverse("hello");
+}
