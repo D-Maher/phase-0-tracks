@@ -10,11 +10,13 @@
 function reverse(string) {
   var reversedString = "";
   for (var i = string.length - 1; i >= 0; i--) {
-    reversedString += string[i]
+    reversedString += string[i];
   }
-  console.log(reversedString);
+  return reversedString;
 }
 
-if ("hello".length == 5) {
-  reverse("hello");
+var newString = reverse("hello");
+
+if (newString.length == 5) {
+  console.log(newString);
 }
