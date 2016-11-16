@@ -50,7 +50,7 @@ function Car(make, model, year, isGoodCar) {
   }
 }
 
-console.log("Let's build a car ...");
+console.log("Let's build some cars ...");
 
 var firstCar = new Car("Honda", "CRV", 2008, true);
 
