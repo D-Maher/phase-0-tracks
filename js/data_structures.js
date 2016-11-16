@@ -16,3 +16,12 @@ horseNames.push("Jim");
 console.log(horseColors);
 
 console.log(horseNames);
+
+
+// Release 1
+
+var horse = { horseNames: horseColors };
+
+for (var i = 0; i < horseNames.length; i++) {
+  console.log(horseNames[i] + " is " + horse.horseNames[i]);
+}
