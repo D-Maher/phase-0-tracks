@@ -3,8 +3,9 @@
 // function that takes a string as a parameter and reverses string
   // input: a "string"
   // steps:
-    // for each letter in the string...
-      // assign letter to -(index) of that letter
+    // for each letter in the string, starting with the last letter in the string...
+      // add each letter to an empty string
+      // decrement counter by 1 to move backwards through string
   // output: the string given to the function, reversed ("gnirts")
 
 function reverse(string) {
