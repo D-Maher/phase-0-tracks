@@ -30,16 +30,41 @@ for (var i = 0; i < horseNames.length; i++) {
 // Release 2
 
 function Car(make, model, year, isGoodCar) {
-  console.log("Our new car: ", this);
 
   this.make = make;
   this.model = model;
   this.year = year;
   this.isGoodCar = isGoodCar;
 
-  this.vroom = function() { console.log("*VROOOOMMM!!!*"); }
-  ;
-
   console.log("CAR INITIALIZATION COMPLETE");
 
+  console.log("Our new car: ", this.make, this.model, this.year);
+
+  this.vroom = function() { 
+    if (this.isGoodCar) {
+    console.log("*VROOOOMMM!!!*");
+    } else {
+    console.log("*the car broke down* :(");
+    }
+
+  }
 }
+
+console.log("Let's build a car ...");
+
+var firstCar = new Car("Honda", "CRV", 2008, true);
+
+console.log("Let's see what this baby can do!!!")
+firstCar.vroom()
+
+
+var oldCar = new Car("Volkswagen", "Jetta", 1986, false);
+
+console.log("Let's see what this baby can do!!!")
+oldCar.vroom()
+
+
+var sweetCar = new Car("Tesla", "Model 3", 2017, true)
+
+console.log("Let's see what this baby can do!!!")
+sweetCar.vroom()
