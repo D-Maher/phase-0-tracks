@@ -1,7 +1,7 @@
 #population density is number of people per square mile as of 2012
 #this data is updated every year with estimates from a 10 year census
 
-
+# A constant, do not want it to change it or manipulate it
 STATE_DATA = {
   "Alabama" => {population_density: 94.65, population: 4822023},
   "Alaska" => {population_density: 1.1111, population: 731449},
