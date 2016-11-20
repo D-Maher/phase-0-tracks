@@ -73,3 +73,13 @@ var draco = {house: "Slytherin", faveSpell: "Crucio", studious: false};
 
 var cedric = {house: "Hufflepuff", faveSpell: "Accio", studious: true};
 
+
+
+function kvMatch(object1, object2) {
+  var keys1 = Object.keys(object1);
+  var keys2 = Object.keys(object2);
+  console.log(keys1);
+  console.log(keys2);
+}
+
+kvMatch(harry, ron);
