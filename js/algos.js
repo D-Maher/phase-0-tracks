@@ -42,7 +42,7 @@ findLongest(words)
 
 // ---------------------------------------------------
 // ---------------------------------------------------
-// ---------------------------------------------------
+
 
 // Release 1: Find a key-value match
 
@@ -62,3 +62,14 @@ findLongest(words)
           // return true
         // otherwise return false
     // output: true or false
+
+var harry = {house: "Gryffindor", faveSpell: "Expelliarmus", studious: false};
+
+var ron = {house: "Gryffindor", faveSpell: "Lumos", studious: false};
+
+var hermione = {house: "Gryffindor", faveSpell: "Wingardium Leviosa", studious: true};
+
+var draco = {house: "Slytherin", faveSpell: "Crucio", studious: false};
+
+var cedric = {house: "Hufflepuff", faveSpell: "Accio", studious: true};
+
