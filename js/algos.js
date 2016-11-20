@@ -5,12 +5,12 @@
     // input: array of words/phrases
     // steps:
       // - find the length of each word or phrase and add that length to a new array of word/phrase lengths (integers)
-      // - sort the array of lengths from largest to smallest using bubble sort
+      // - sort the array of lengths from largest to smallest using bubble sort...
         // - swapping adjacent lengths if one length is less than the next length
       // return the word/phrase in the initial array whose length matches the first integer in the lengths array
     // output: the longest phrase in the inputted array
 
-var words = ["word", "woord", "wooooooorrrrrd", "wooooord", "word"];
+var words = ["word", "woord", "wooooooorrrrrd", "wooooord", "word", "this is by far the longest element in this array"];
 
 var wordLengths = [];
 
@@ -19,7 +19,7 @@ function findLongest(arr) {
     wordLengths.push(arr[i].length);
   }
   var swapped;
-  do {
+  do { // bubble sort
     swapped = false;
     for (var j = 0; j < wordLengths.length - 1; j++) {
       if (wordLengths[j] < wordLengths[j + 1]) {
