@@ -38,3 +38,27 @@ function findLongest(arr) {
 }
 
 findLongest(words)
+
+
+// ---------------------------------------------------
+// ---------------------------------------------------
+// ---------------------------------------------------
+
+// Release 1: Find a key-value match
+
+// PSEUDO
+  // setup: declare a few different objects with different key-value combinations
+
+  // declare kvMatch function
+    // input: two JS objects
+    // steps:
+      // grab array of keys from each object and set each array to a variable
+      // if the first key of one object matches a key in the other...
+        // set that key equal to a variable
+      // otherwise...
+        // return false
+      // compare the values associated with the matched key (stored in a variable) for each object
+        // if the values match...
+          // return true
+        // otherwise return false
+    // output: true or false
