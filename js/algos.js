@@ -12,9 +12,9 @@
 
 var words = ["word", "woord", "wooooooorrrrrd", "wooooord", "word", "this is by far the longest element in this array"];
 
-var wordLengths = [];
 
 function findLongest(arr) {
+  var wordLengths = [];
   for (var i = 0; i < arr.length; i++) {
     wordLengths.push(arr[i].length);
   }
@@ -37,7 +37,7 @@ function findLongest(arr) {
   }
 }
 
-findLongest(words)
+findLongest(words);
 
 
 // ---------------------------------------------------
@@ -126,7 +126,7 @@ console.log(kvMatch(harry, jonSnow));
     // output: an array with specified length from input
 
 function randomWords(integer) {
-  words = [];
+  var words = [];
   for (var i = 0; i < integer; i++) {
     var wordArray = [];
     var wordLength = Math.floor((Math.random() * 10) + 1);
@@ -134,12 +134,15 @@ function randomWords(integer) {
       var lowercaseDecimal = Math.floor((Math.random() * (122 - 97 + 1) + 97));
       var addLetter = String.fromCharCode(lowercaseDecimal);
       wordArray.push(addLetter);
-      console.log(wordArray);
-      singleWord = wordArray.join("");
+      var singleWord = wordArray.join("");
     }
     words.push(singleWord);
   }
   return words;
 }
 
-console.log(randomWords(3));
+var testArray = randomWords(4);
+
+console.log(testArray);
+
+findLongest(testArray);
