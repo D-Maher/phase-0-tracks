@@ -86,14 +86,14 @@ function kvMatch(object1, object2) {
       }
     }
   }
-  var matched = false
+  var matched = false;
     for (var k = 0; k < allMatchedKeys.length; k++) {
       var prop = allMatchedKeys[k];
       if ((object1[prop]) == (object2[prop])) {
         matched = true;
       }
     }
-  return matched
+  return matched;
 }
 
 console.log(kvMatch(harry, ron));
