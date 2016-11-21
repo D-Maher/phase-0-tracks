@@ -49,29 +49,19 @@ findLongest(words)
 // PSEUDO
   // setup: declare a few different objects with different key-value combinations
 
-  // declare keyMatch function
+  // declare kvMatch function
     // input: two JS objects
     // steps:
       // grab array of keys from each object and set each array to a variable
       // if the first key of one object matches a key in the other...
-        // set that key equal to a variable matchedKey
-      // otherwise...
-        // return false
-    // output: value of matchedKey 
-
-  // declare valueMatch function
-    // input: matchedKey
-    // steps: 
+        // add that key to an array that will hold matched keys
       // compare the values associated with the matched key (stored in matchedKey) for each object
         // if the values match...
           // return true
         // otherwise... 
           // return false
     // output: true or false
-
-  // declare kvMatch function
-    // combines two functions above
-    // output = true or false
+    
 
 var harry = {house: "Gryffindor", faveSpell: "Expelliarmus", studious: false};
 
@@ -83,29 +73,34 @@ var draco = {house: "Slytherin", faveSpell: "Crucio", studious: false};
 
 var cedric = {house: "Hufflepuff", faveSpell: "Accio", studious: true};
 
-var jonSnow = {bastard: true, home: "the North", house: "Stark",}
+var jonSnow = {bastard: true, home: "Winterfell", house: "Stark"};
 
-function keyMatch(object1, object2) {
+
+function kvMatch(object1, object2) {
   var keys1 = Object.keys(object1);
   var keys2 = Object.keys(object2);
+  var allMatchedKeys = [];
   for (var i = 0; i < keys1.length; i++) {
     for (var j = 0; j < keys2.length; j++) {
       if (keys1[i] == keys2[j]) {
-        var matchedKey = keys1[i];
-        return matchedKey;
-      } else {
-        return false;
+        allMatchedKeys.push(keys1[i]);
       }
     }
   }
+  var matched = false
+    for (var k = 0; k < allMatchedKeys.length; k++) {
+      var prop = allMatchedKeys[k];
+      if ((object1[prop]) == (object2[prop])) {
+        matched = true;
+      }
+    }
+  return matched
 }
 
-function valueMatch(matchedKey) {
-  if (object1[matchedKey] == object2[matchedKey]) {
-    return true;
-  } else {
-    return false;
-  }
-}
+console.log(kvMatch(harry, ron));
 
-console.log(keyMatch(hermione, harry));
+console.log(kvMatch(harry, draco));
+
+console.log(kvMatch(hermione, cedric));
+
+console.log(kvMatch(harry, jonSnow));
