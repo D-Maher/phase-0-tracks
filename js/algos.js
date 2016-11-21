@@ -49,19 +49,29 @@ findLongest(words)
 // PSEUDO
   // setup: declare a few different objects with different key-value combinations
 
-  // declare kvMatch function
+  // declare keyMatch function
     // input: two JS objects
     // steps:
       // grab array of keys from each object and set each array to a variable
       // if the first key of one object matches a key in the other...
-        // set that key equal to a variable
+        // set that key equal to a variable matchedKey
       // otherwise...
         // return false
-      // compare the values associated with the matched key (stored in a variable) for each object
+    // output: value of matchedKey 
+
+  // declare valueMatch function
+    // input: matchedKey
+    // steps: 
+      // compare the values associated with the matched key (stored in matchedKey) for each object
         // if the values match...
           // return true
-        // otherwise return false
+        // otherwise... 
+          // return false
     // output: true or false
+
+  // declare kvMatch function
+    // combines two functions above
+    // output = true or false
 
 var harry = {house: "Gryffindor", faveSpell: "Expelliarmus", studious: false};
 
@@ -74,12 +84,24 @@ var draco = {house: "Slytherin", faveSpell: "Crucio", studious: false};
 var cedric = {house: "Hufflepuff", faveSpell: "Accio", studious: true};
 
 
-
-function kvMatch(object1, object2) {
+function keyMatch(object1, object2) {
   var keys1 = Object.keys(object1);
   var keys2 = Object.keys(object2);
-  console.log(keys1);
-  console.log(keys2);
+  for (var i = 0; i < keys1.length; i++) {
+    for (var j = 0; j < keys2.length; j++) {
+      if (keys1[i] == keys2[j]) {
+        var matchedKey = keys1[i];
+        return matchedKey;
+      } else {
+        return false;
+      }
+    }
+  }
 }
+  // if (object1[matchedKey] == object2[matchedKey]) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
 
-kvMatch(harry, ron);
+console.log(keyMatch(hermione, draco));
