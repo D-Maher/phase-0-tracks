@@ -32,12 +32,12 @@ function findLongest(arr) {
   } while (swapped);
   for (var k = 0; k < arr.length; k++) {
     if (arr[k].length == wordLengths[0]) {
-      console.log(arr[k]);
+      return arr[k];
     }
   }
 }
 
-findLongest(words);
+console.log(findLongest(words));
 
 
 // ---------------------------------------------------
@@ -141,8 +141,11 @@ function randomWords(integer) {
   return words;
 }
 
-var testArray = randomWords(4);
 
-console.log(testArray);
+for (var n = 0; n < 10; n++) {
+  var testArray = randomWords(4);
 
-findLongest(testArray);
+  console.log(testArray);
+
+  console.log("The longest word in the array above is: " + findLongest(testArray))
+}
