@@ -113,16 +113,31 @@ console.log(kvMatch(harry, jonSnow));
 
 // PSEUDO
   // declare function randomWords
-    // input: integer (for length of an array)
+    // input: integer (for number of words in array)
     // steps:
       // declare an empty array to which strings will be added
       // set up a loop that will run a number of times equal to the integer passed into the method:
         // create a word by running a loop a random number of times (between 1 and 10 times, decided randomly)
-          // generate a random integer
+          // generate a random integer between 97 and 122 (lowercase letter decimals)
           // convert each integer to a character
           // add that character to a word-building array
           // join the array of random characters into a single word
         // add the word to the strings array
     // output: an array with specified length from input
 
-function 
+function randomWords(integer) {
+  words = [];
+  for (var i = 0; i < integer; i++) {
+    var wordArray = [];
+    var wordLength = Math.floor((Math.random() * 10) + 1);
+    for (var j = 0; j < wordLength; j++) {
+      var lowercaseDecimal = Math.floor((Math.random() * (122 - 97 + 1) + 97))
+      var addLetter = String.fromCharCode(lowercaseDecimal)
+      wordArray.push(addLetter)
+      singleWord = wordArray.join()
+    }
+    words.push(singleWord)
+  }
+  return words
+}
+
