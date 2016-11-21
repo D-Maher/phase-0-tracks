@@ -55,13 +55,12 @@ findLongest(words)
       // grab array of keys from each object and set each array to a variable
       // if the first key of one object matches a key in the other...
         // add that key to an array that will hold matched keys
-      // compare the values associated with the matched key (stored in matchedKey) for each object
+      // compare the values associated with each key within the matched keys array, for each object
         // if the values match...
           // return true
         // otherwise... 
           // return false
     // output: true or false
-    
 
 var harry = {house: "Gryffindor", faveSpell: "Expelliarmus", studious: false};
 
@@ -104,3 +103,6 @@ console.log(kvMatch(harry, draco));
 console.log(kvMatch(hermione, cedric));
 
 console.log(kvMatch(harry, jonSnow));
+
+// ---------------------------------------------------
+// ---------------------------------------------------
