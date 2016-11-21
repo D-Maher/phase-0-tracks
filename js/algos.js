@@ -131,13 +131,15 @@ function randomWords(integer) {
     var wordArray = [];
     var wordLength = Math.floor((Math.random() * 10) + 1);
     for (var j = 0; j < wordLength; j++) {
-      var lowercaseDecimal = Math.floor((Math.random() * (122 - 97 + 1) + 97))
-      var addLetter = String.fromCharCode(lowercaseDecimal)
-      wordArray.push(addLetter)
-      singleWord = wordArray.join()
+      var lowercaseDecimal = Math.floor((Math.random() * (122 - 97 + 1) + 97));
+      var addLetter = String.fromCharCode(lowercaseDecimal);
+      wordArray.push(addLetter);
+      console.log(wordArray);
+      singleWord = wordArray.join("");
     }
-    words.push(singleWord)
+    words.push(singleWord);
   }
-  return words
+  return words;
 }
 
+console.log(randomWords(3));
