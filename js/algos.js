@@ -83,6 +83,7 @@ var draco = {house: "Slytherin", faveSpell: "Crucio", studious: false};
 
 var cedric = {house: "Hufflepuff", faveSpell: "Accio", studious: true};
 
+var jonSnow = {bastard: true, home: "the North", house: "Stark",}
 
 function keyMatch(object1, object2) {
   var keys1 = Object.keys(object1);
@@ -98,10 +99,13 @@ function keyMatch(object1, object2) {
     }
   }
 }
-  // if (object1[matchedKey] == object2[matchedKey]) {
-  //   return true;
-  // } else {
-  //   return false;
-  // }
 
-console.log(keyMatch(hermione, draco));
+function valueMatch(matchedKey) {
+  if (object1[matchedKey] == object2[matchedKey]) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(keyMatch(hermione, harry));
