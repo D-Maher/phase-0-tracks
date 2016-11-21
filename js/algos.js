@@ -104,5 +104,25 @@ console.log(kvMatch(hermione, cedric));
 
 console.log(kvMatch(harry, jonSnow));
 
+
 // ---------------------------------------------------
 // ---------------------------------------------------
+
+
+// Release 2: Generate Random Test Data
+
+// PSEUDO
+  // declare function randomWords
+    // input: integer (for length of an array)
+    // steps:
+      // declare an empty array to which strings will be added
+      // set up a loop that will run a number of times equal to the integer passed into the method:
+        // create a word by running a loop a random number of times (between 1 and 10 times, decided randomly)
+          // generate a random integer
+          // convert each integer to a character
+          // add that character to a word-building array
+          // join the array of random characters into a single word
+        // add the word to the strings array
+    // output: an array with specified length from input
+
+function 
