@@ -1,0 +1,41 @@
+Release 2
+
+1. Display the information in one table (either table is fine).
+
+    command: SELECT * FROM students;
+    output: 1|Harry Potter|1980|Defense Against the Dark Arts|true|1
+            2|Ron Weasley|1980|Transfiguration|true|1
+            3|Hermione Granger|1979|Charms|false|1
+            4|Cedric Diggory|1977|Charms|true|4
+            5|Draco Malfoy|1980|Potions|true|2
+            6|Luna Lovegood|1981|Care of Magical Creatures|false|3
+            7|Neville Longbottom|1980|Herbology|false|1
+            8|Newt Scamander|1897|Care of Magical Creatures|false|4
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+
+    command: 
+    output: 
+
+3. Display the information in both tables using one query.
+
+    command: 
+    output: 
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+    command: 
+    output: 
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+
+    command: 
+    output: 
+
+
+
+Release 3
+
+    command: 
+    output: 
+
