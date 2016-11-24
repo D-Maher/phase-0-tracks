@@ -3,7 +3,9 @@ Release 2
 1. Display the information in one table (either table is fine).
 
     command: SELECT * FROM students;
-    output: 1|Harry Potter|1980|Defense Against the Dark Arts|true|1
+
+    output: 
+            1|Harry Potter|1980|Defense Against the Dark Arts|true|1
             2|Ron Weasley|1980|Transfiguration|true|1
             3|Hermione Granger|1979|Charms|false|1
             4|Cedric Diggory|1977|Charms|true|4
@@ -14,23 +16,39 @@ Release 2
 
 2. Update an item that meets some condition (you can choose a condition that makes sense).
 
-    command: 
-    output: 
+    command: UPDATE students SET fav_subject="Arithmancy" WHERE id=3;
 
 3. Display the information in both tables using one query.
 
-    command: 
+    command: SELECT * FROM students, houses WHERE students.house_id = houses.id;
+
     output: 
+            1|Harry Potter|1980|Defense Against the Dark Arts|true|1|1|Gryffindor
+            2|Ron Weasley|1980|Transfiguration|true|1|1|Gryffindor
+            3|Hermione Granger|1979|Arithmancy|false|1|1|Gryffindor
+            4|Cedric Diggory|1977|Charms|true|4|4|Hufflepuff
+            5|Draco Malfoy|1980|Potions|true|2|2|Slytherin
+            6|Luna Lovegood|1981|Care of Magical Creatures|false|3|3|Ravenclaw
+            7|Neville Longbottom|1980|Herbology|false|1|1|Gryffindor
+            8|Newt Scamander|1897|Care of Magical Creatures|false|4|4|Hufflepuff
 
 4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
 
-    command: 
+    command: SELECT students.name, students.fav_subject, houses.name FROM students JOIN houses ON students.house_id = houses.id;
+
     output: 
+            Harry Potter|Defense Against the Dark Arts|Gryffindor
+            Ron Weasley|Transfiguration|Gryffindor
+            Hermione Granger|Arithmancy|Gryffindor
+            Cedric Diggory|Charms|Hufflepuff
+            Draco Malfoy|Potions|Slytherin
+            Luna Lovegood|Care of Magical Creatures|Ravenclaw
+            Neville Longbottom|Herbology|Gryffindor
+            Newt Scamander|Care of Magical Creatures|Hufflepuff
 
 5. Delete an item that meets some condition (you can choose a condition that makes sense).
 
-    command: 
-    output: 
+    command: DELETE FROM students WHERE birth_year < 1900;
 
 
 
