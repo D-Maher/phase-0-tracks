@@ -54,6 +54,59 @@ Release 2
 
 Release 3
 
-    command: 
-    output: 
+    command: SELECT students.name, students.birth_year, houses.name FROM students LEFT JOIN houses ON students.house_id = houses.id;
 
+    output: 
+            Harry Potter|1980|Gryffindor
+            Ron Weasley|1980|Gryffindor
+            Hermione Granger|1979|Gryffindor
+            Cedric Diggory|1977|Hufflepuff
+            Draco Malfoy|1980|Slytherin
+            Luna Lovegood|1981|Ravenclaw
+            Neville Longbottom|1980|Gryffindor
+            Danny|1992|
+
+
+    command: SELECT students.name, students.birth_year, houses.name FROM students JOIN houses ON students.house_id = houses.id WHERE plays_quidditch = "true";
+
+    output:
+            Harry Potter|1980|Gryffindor
+            Ron Weasley|1980|Gryffindor
+            Cedric Diggory|1977|Hufflepuff
+            Draco Malfoy|1980|Slytherin
+
+    command: SELECT students.name, houses.name FROM students CROSS JOIN houses;
+
+    output:
+            Harry Potter|Gryffindor
+            Harry Potter|Slytherin
+            Harry Potter|Ravenclaw
+            Harry Potter|Hufflepuff
+            Ron Weasley|Gryffindor
+            Ron Weasley|Slytherin
+            Ron Weasley|Ravenclaw
+            Ron Weasley|Hufflepuff
+            Hermione Granger|Gryffindor
+            Hermione Granger|Slytherin
+            Hermione Granger|Ravenclaw
+            Hermione Granger|Hufflepuff
+            Cedric Diggory|Gryffindor
+            Cedric Diggory|Slytherin
+            Cedric Diggory|Ravenclaw
+            Cedric Diggory|Hufflepuff
+            Draco Malfoy|Gryffindor
+            Draco Malfoy|Slytherin
+            Draco Malfoy|Ravenclaw
+            Draco Malfoy|Hufflepuff
+            Luna Lovegood|Gryffindor
+            Luna Lovegood|Slytherin
+            Luna Lovegood|Ravenclaw
+            Luna Lovegood|Hufflepuff
+            Neville Longbottom|Gryffindor
+            Neville Longbottom|Slytherin
+            Neville Longbottom|Ravenclaw
+            Neville Longbottom|Hufflepuff
+            Danny|Gryffindor
+            Danny|Slytherin
+            Danny|Ravenclaw
+            Danny|Hufflepuff
