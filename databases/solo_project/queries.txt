@@ -14,9 +14,11 @@ Release 2
             7|Neville Longbottom|1980|Herbology|false|1
             8|Newt Scamander|1897|Care of Magical Creatures|false|4
 
+
 2. Update an item that meets some condition (you can choose a condition that makes sense).
 
     command: UPDATE students SET fav_subject="Arithmancy" WHERE id=3;
+
 
 3. Display the information in both tables using one query.
 
@@ -32,6 +34,7 @@ Release 2
             7|Neville Longbottom|1980|Herbology|false|1|1|Gryffindor
             8|Newt Scamander|1897|Care of Magical Creatures|false|4|4|Hufflepuff
 
+
 4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
 
     command: SELECT students.name, students.fav_subject, houses.name FROM students JOIN houses ON students.house_id = houses.id;
@@ -45,6 +48,7 @@ Release 2
             Luna Lovegood|Care of Magical Creatures|Ravenclaw
             Neville Longbottom|Herbology|Gryffindor
             Newt Scamander|Care of Magical Creatures|Hufflepuff
+
 
 5. Delete an item that meets some condition (you can choose a condition that makes sense).
 
@@ -74,6 +78,7 @@ Release 3
             Ron Weasley|1980|Gryffindor
             Cedric Diggory|1977|Hufflepuff
             Draco Malfoy|1980|Slytherin
+
 
     command: SELECT students.name, houses.name FROM students CROSS JOIN houses;
 
