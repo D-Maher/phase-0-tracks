@@ -1,0 +1,31 @@
+JOIN ALL THREE TABLES:
+
+sqlite> SELECT * FROM reviews JOIN users ON users.id=reviews.user_id
+   ...> JOIN businesses ON businesses.id = reviews.business_id;
+
+OUTPUT:
+1|5|great experience here, pretty sure it's haunted|1|1|1|Herman|Jablonsky|1|Grundy Hollow Wedding Chapel
+2|1|couldn't do child's pose|2|2|2|Bradford|Pitt|2|Lotus Yoga
+3|5|couldn't get enough of the child's pose|2|3|3|Steven|Wonder|2|Lotus Yoga
+4|2|too bright, no chocolate|3|6|6|Count|Chocula|3|Sushi World
+
+
+JOIN ALL THREE ITEMS (NO REPETITIVE DATA):
+
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM reviews JOIN users ON users.id=reviews.user_id
+   ...> JOIN businesses ON businesses.id = reviews.business_id;
+
+OUTPUT:
+Herman|Jablonsky|Grundy Hollow Wedding Chapel|5|great experience here, pretty sure it's haunted
+Bradford|Pitt|Lotus Yoga|1|couldn't do child's pose
+Steven|Wonder|Lotus Yoga|5|couldn't get enough of the child's pose
+Count|Chocula|Sushi World|2|too bright, no chocolate
+
+
+DISPLAY ALL INFO FOR ONE BUSINESS:
+
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM businesses JOIN reviews ON businesses.id=reviews.business_id AND businesses.id=2 JOIN users ON reviews.user_id=users.id;
+
+OUTPUT:
+Bradford|Pitt|Lotus Yoga|1|couldn't do child's pose
+Steven|Wonder|Lotus Yoga|5|couldn't get enough of the child's pose
