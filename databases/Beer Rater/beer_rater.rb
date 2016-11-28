@@ -14,10 +14,25 @@
   # - quit the program
 
 
+# BUSINESS LOGIC
+
+require 'sqlite3'
+
+beers_db = SQLite3::Database.new("beers.db")
+beers_db.results_as_hash = true
+
+create_table_cmd = <<-SQL
+  CREATE TABLE IF NOT EXISTS beers (
+    id INTEGER PRIMARY KEY,
+    name VARCHAR(255)
+    rating INT
+  )
+SQL
+
+beers_db.execute(create_table_cmd)
 
 
-
-
+# USER INTERFACE
 
 puts "Welcome to the Beer Rater!"
 
@@ -34,20 +49,22 @@ choice = gets.chomp.to_i
 
 case choice
 
-when 1
-  puts "Here are your beers and their ratings:"
+  when 1
+    puts "Here are your beers and their ratings:"
 
-when 2
-  puts "Please type the name of a beer you would like to add."
-  beer_name = gets.chomp
+  when 2
+    puts "Please type the name of a beer you would like to add."
+    beer_name = gets.chomp
 
-when 3
-  puts "Which beer's rating would you like to update?"
-  beer_name = gets.chomp
+  when 3
+    puts "Which beer's rating would you like to update?"
+    beer_name = gets.chomp
 
-when 4
-  puts "Which beer would you like to remove from your list?"
-  beer_name = gets.chomp
+  when 4
+    puts "Which beer would you like to remove from your list?"
+    beer_name = gets.chomp
 
-when 5
-  # break
+  when 5
+    # break
+
+end
