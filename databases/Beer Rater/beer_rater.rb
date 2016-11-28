@@ -85,21 +85,32 @@ loop do
       puts "Which beer's rating would you like to update?\n\n"
         beer_name = gets.chomp
       puts
-      puts "What would you like to change #{beer_name}'s rating to? Please type a number 1-5.\n\n"
-        rating = gets.chomp.to_i
-      puts
-      puts "Okay! You have changed #{beer_name}'s rating to #{rating}.\n\n"
-      beers_db.execute("UPDATE beers SET rating=? WHERE beer_name=?", [rating, beer_name])
+      if beer_exists(beers_db, beer_name) == 0
+        puts "#{beer_name} is not in your list! Please select a beer that you have already added to your list.\n\n"
+      else
+        puts "What would you like to change #{beer_name}'s rating to? Please type a number 1-5.\n\n"
+          rating = gets.chomp.to_i
+        puts
+        puts "Okay! You have changed #{beer_name}'s rating to #{rating}.\n\n"
+        beers_db.execute("UPDATE beers SET rating=? WHERE beer_name=?", [rating, beer_name])
+      end
 
     when 4
       puts "Which beer would you like to remove from your list?\n\n"
         beer_name = gets.chomp
       puts
-      puts "Alright, #{beer_name} has been removed from your list.\n\n"
-      beers_db.execute("DELETE FROM beers WHERE beer_name=?", [beer_name])
+      if beer_exists(beers_db, beer_name) == 0
+        puts "#{beer_name} cannot be removed because it is not in your list! Please select a beer that exists in your list.\n\n"
+      else
+        puts "Alright, #{beer_name} has been removed from your list.\n\n"
+        beers_db.execute("DELETE FROM beers WHERE beer_name=?", [beer_name])
+      end
 
     when 5
       break
+
+    else
+      puts "Oops, didn't quite catch that... Please enter a valid option.\n\n"
     end
 
 end
