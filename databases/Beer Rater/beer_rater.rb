@@ -4,7 +4,6 @@
 
 # initialize a database
   # create a 'beers' table to hold each beer and its corresponding rating
-  # create a 'users' table to keep track of users that log in
 
 # setup main menu with the following options for the user:
   # - add a beer with its rating
@@ -30,6 +29,11 @@ SQL
 
 beers_db.execute(create_table_cmd)
 
+def beer_exists(database, beer_name)
+  exist_query = database.execute("SELECT EXISTS(SELECT 1 FROM beers WHERE beer_name=?)", [beer_name])
+  exist_query[0][0]
+end
+
 
 # USER INTERFACE
 
@@ -52,11 +56,11 @@ loop do
   case choice
 
     when 1
-      puts "Here are your beers and their ratings: \n\n"
       beer_list = beers_db.execute("SELECT * FROM beers")
       if beer_list.empty?
-        puts "You have not added any beers to your list yet! Please select option 2 in the main menu to add your first beer.\n\n"
+        puts "There are no beers in your list! Please select option 2 in the main menu to add a beer.\n\n"
       else
+        puts "Here are your beers and their ratings: \n\n"
         beer_list.each do |beer|
           puts "    #{beer['beer_name']}: #{beer['rating']}\n\n"
         end
@@ -66,6 +70,10 @@ loop do
       puts "Please type the name of a beer you would like to add.\n\n"
         beer_name = gets.chomp
       puts
+      p beer_exists(beers_db, beer_name)
+      # if beer_exists(beers_db, beer_name) == 1
+      #   puts "IT'S ALREADY HERE, YA TURKEY!"
+      # end
       puts "Please give #{beer_name} a rating, 1-5.\n\n"
         rating = gets.chomp.to_i
       puts
