@@ -34,6 +34,14 @@ def beer_exists(database, beer_name)
   exist_query[0][0]
 end
 
+def valid_rating(integer)
+  if integer.between?(1, 5)
+    true
+  else
+    false
+  end
+end
+
 
 # USER INTERFACE
 
@@ -49,7 +57,7 @@ loop do
   puts "    4) Remove a beer from your list."
   puts "    5) Exit the program."
 
-  puts "\nPlease type a number to select an option.\n\n"
+  puts "\nPlease enter a number to select an option.\n\n"
   choice = gets.chomp.to_i
   puts
 
@@ -67,7 +75,7 @@ loop do
       end
 
     when 2
-      puts "Please type the name of a beer you would like to add.\n\n"
+      puts "Please enter the name of a beer you would like to add.\n\n"
         beer_name = gets.chomp
       puts
       if beer_exists(beers_db, beer_name) == 1
@@ -77,8 +85,13 @@ loop do
         puts "Please give #{beer_name} a rating, 1-5.\n\n"
           rating = gets.chomp.to_i
         puts
+        until valid_rating(rating) == true
+          puts "Please enter a valid rating: 1-5.\n\n"
+          rating = gets.chomp.to_i
+          puts
+        end
         puts "Great! #{beer_name} has been added to your list with a rating of #{rating}.\n\n"
-        beers_db.execute("INSERT INTO beers (beer_name, rating) VALUES (?, ?)", [beer_name, rating])
+        beers_db.execute("INSERT INTO beers (beer_name, rating) VALUES (?, ?)", [beer_name, rating]) 
       end
 
     when 3
@@ -91,6 +104,11 @@ loop do
         puts "What would you like to change #{beer_name}'s rating to? Please type a number 1-5.\n\n"
           rating = gets.chomp.to_i
         puts
+        until valid_rating(rating) == true
+          puts "Please enter a valid rating: 1-5.\n\n"
+          rating = gets.chomp.to_i
+          puts
+        end
         puts "Okay! You have changed #{beer_name}'s rating to #{rating}.\n\n"
         beers_db.execute("UPDATE beers SET rating=? WHERE beer_name=?", [rating, beer_name])
       end
