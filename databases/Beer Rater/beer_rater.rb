@@ -29,7 +29,7 @@ SQL
 
 beers_db.execute(create_table_cmd)
 
-def beer_exists(database, beer_name)
+def beer_exists(database, beer_name) # this method will return 1 if the beer is found in the database or 0 if it is not
   exist_query = database.execute("SELECT EXISTS(SELECT 1 FROM beers WHERE beer_name=?)", [beer_name])
   exist_query[0][0]
 end
