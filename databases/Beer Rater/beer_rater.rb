@@ -24,7 +24,7 @@ beers_db.results_as_hash = true
 create_table_cmd = <<-SQL
   CREATE TABLE IF NOT EXISTS beers (
     id INTEGER PRIMARY KEY,
-    name VARCHAR(255)
+    beer_name VARCHAR(255)
     rating INT
   )
 SQL
@@ -51,11 +51,16 @@ case choice
 
   when 1
     puts "Here are your beers and their ratings:"
-
+    beer_list = beers_db.execute("SELECT * FROM beers")
+    beer_list.each do |beer|
+      puts "#{beer['beer_name']}: #{beer['rating']}"
+    end
   when 2
     puts "Please type the name of a beer you would like to add."
-    beer_name = gets.chomp
-
+      beer_name = gets.chomp
+    puts "Great! Please give #{beer_name} a rating, 1-5."
+      rating = gets.chomp.to_i
+    beers_db.execute("INSERT INTO beers (beer_name, rating) VALUES (?, ?)", [beer_name, rating])
   when 3
     puts "Which beer's rating would you like to update?"
     beer_name = gets.chomp
