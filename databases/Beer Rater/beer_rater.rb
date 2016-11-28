@@ -46,38 +46,44 @@ loop do
   puts "    4) Remove a beer from your list."
   puts "    5) Exit the program."
 
-  puts "\nPlease type a number to select an option."
+  puts "\nPlease type a number to select an option.\n\n"
   choice = gets.chomp.to_i
+  puts
 
   case choice
 
     when 1
-      puts "Here are your beers and their ratings:"
+      puts "Here are your beers and their ratings: \n\n"
       beer_list = beers_db.execute("SELECT * FROM beers")
       beer_list.each do |beer|
-        puts "#{beer['beer_name']}: #{beer['rating']}"
+        puts "    #{beer['beer_name']}: #{beer['rating']}\n\n"
       end
 
     when 2
-      puts "Please type the name of a beer you would like to add."
+      puts "Please type the name of a beer you would like to add.\n\n"
         beer_name = gets.chomp
-      puts "Please give #{beer_name} a rating, 1-5."
+      puts
+      puts "Please give #{beer_name} a rating, 1-5.\n\n"
         rating = gets.chomp.to_i
-      puts "Great! #{beer_name} has been added to your list with a rating of #{rating}."
+      puts
+      puts "Great! #{beer_name} has been added to your list with a rating of #{rating}.\n\n"
       beers_db.execute("INSERT INTO beers (beer_name, rating) VALUES (?, ?)", [beer_name, rating])
 
     when 3
-      puts "Which beer's rating would you like to update?"
+      puts "Which beer's rating would you like to update?\n\n"
         beer_name = gets.chomp
-      puts "What would you like to change #{beer_name}'s rating to? Please type a number 1-5."
+      puts
+      puts "What would you like to change #{beer_name}'s rating to? Please type a number 1-5.\n\n"
         rating = gets.chomp.to_i
-      puts "Okay! You have changed #{beer_name}'s rating to #{rating}."
+      puts
+      puts "Okay! You have changed #{beer_name}'s rating to #{rating}.\n\n"
       beers_db.execute("UPDATE beers SET rating=? WHERE beer_name=?", [rating, beer_name])
 
     when 4
-      puts "Which beer would you like to remove from your list?"
+      puts "Which beer would you like to remove from your list?\n\n"
         beer_name = gets.chomp
-      puts "Alright, #{beer_name} has been removed from your list."
+      puts
+      puts "Alright, #{beer_name} has been removed from your list.\n\n"
       beers_db.execute("DELETE FROM beers WHERE beer_name=?", [beer_name])
 
     when 5
