@@ -23,7 +23,6 @@ beers_db.results_as_hash = true
 
 create_table_cmd = <<-SQL
   CREATE TABLE IF NOT EXISTS beers (
-    id INTEGER PRIMARY KEY,
     beer_name VARCHAR(255),
     rating INT
   )
@@ -55,8 +54,12 @@ loop do
     when 1
       puts "Here are your beers and their ratings: \n\n"
       beer_list = beers_db.execute("SELECT * FROM beers")
-      beer_list.each do |beer|
-        puts "    #{beer['beer_name']}: #{beer['rating']}\n\n"
+      if beer_list.empty?
+        puts "You have not added any beers to your list yet! Please select option 2 in the main menu to add your first beer.\n\n"
+      else
+        beer_list.each do |beer|
+          puts "    #{beer['beer_name']}: #{beer['rating']}\n\n"
+        end
       end
 
     when 2
