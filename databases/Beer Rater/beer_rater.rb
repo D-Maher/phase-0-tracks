@@ -70,15 +70,16 @@ loop do
       puts "Please type the name of a beer you would like to add.\n\n"
         beer_name = gets.chomp
       puts
-      p beer_exists(beers_db, beer_name)
-      # if beer_exists(beers_db, beer_name) == 1
-      #   puts "IT'S ALREADY HERE, YA TURKEY!"
-      # end
-      puts "Please give #{beer_name} a rating, 1-5.\n\n"
-        rating = gets.chomp.to_i
-      puts
-      puts "Great! #{beer_name} has been added to your list with a rating of #{rating}.\n\n"
-      beers_db.execute("INSERT INTO beers (beer_name, rating) VALUES (?, ?)", [beer_name, rating])
+      if beer_exists(beers_db, beer_name) == 1
+        existing_rating = (beers_db.execute("SELECT rating FROM beers WHERE beer_name=?", [beer_name]))[0][0]
+        puts "#{beer_name} is already in your list with a rating of #{existing_rating}! Please add a new beer.\n\n"
+      else
+        puts "Please give #{beer_name} a rating, 1-5.\n\n"
+          rating = gets.chomp.to_i
+        puts
+        puts "Great! #{beer_name} has been added to your list with a rating of #{rating}.\n\n"
+        beers_db.execute("INSERT INTO beers (beer_name, rating) VALUES (?, ?)", [beer_name, rating])
+      end
 
     when 3
       puts "Which beer's rating would you like to update?\n\n"
