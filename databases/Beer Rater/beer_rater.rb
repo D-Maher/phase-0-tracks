@@ -12,3 +12,42 @@
   # - remove a beer from the list
   # - display all beers with their ratings
   # - quit the program
+
+
+
+
+
+
+
+puts "Welcome to the Beer Rater!"
+
+puts "This is the main menu. Below are your options:\n\n"
+
+puts "    1) Display your beers and their ratings."
+puts "    2) Add a beer to your list."
+puts "    3) Update the rating of a beer."
+puts "    4) Remove a beer from your list."
+puts "    5) Exit the program."
+
+puts "\nPlease type a number to select an option."
+choice = gets.chomp.to_i
+
+case choice
+
+when 1
+  puts "Here are your beers and their ratings:"
+
+when 2
+  puts "Please type the name of a beer you would like to add."
+  beer_name = gets.chomp
+
+when 3
+  puts "Which beer's rating would you like to update?"
+  beer_name = gets.chomp
+
+when 4
+  puts "Which beer would you like to remove from your list?"
+  beer_name = gets.chomp
+
+when 5
+  # break
