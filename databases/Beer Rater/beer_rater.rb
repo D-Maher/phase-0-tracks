@@ -37,7 +37,7 @@ end
 
 # USER INTERFACE
 
-puts "Welcome to the Beer Rater!"
+puts "Welcome to the Beer Rater 9001 (TM)!"
 
 loop do
 
