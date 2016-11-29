@@ -18,9 +18,11 @@ What are some common HTTP status codes?
 * 5xx Server Error codes
     - 500 Internal Server Error - the server encountered an unexpected condition which prevented it from fulfilling the request
 
+
 What is the difference between a GET request and a POST request? When might each be used?
 
     A GET request requests data from a specified resource while a POST request submits data (much like a form submission) to be processed to a specified resource. GET would be used to retrieve remote data while POST would be used to insert or update remote data.
+
 
 Optional bonus question: What is a cookie (the technical kind, not the delicious kind)? How does it relate to HTTP requests?
     
