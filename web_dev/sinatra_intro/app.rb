@@ -14,13 +14,13 @@ get '/' do # This is technically a Ruby method
 
   # p params # Anything printed in this manner will appear in the console that Shotgun is running in, and this returns '{"name" => "Danny"}'
 
-  # name = params[:name] # Whenever query parameters are sent, Sinatra stores them in a hash called 'params', this is how you access data put in the URL. We access 'name' in the 'params' hash as a symbol, even though it's a string (Sinatra magic)
+  name = params[:name] # Whenever query parameters are sent, Sinatra stores them in a hash called 'params', this is how you access data put in the URL. We access 'name' in the 'params' hash as a symbol, even though it's a string (Sinatra magic)
 
-  # if name # i.e. if there is a name provided in the URL
-  #   "Hello, #{name}!" # Putting the query parameter '/?name=Danny' in the address bar after 'localhost:9393' won't work without the 'name = ...' line
-  # else # i.e. if no name is provided
-  #   "Hello, you!"
-  # end
+  if name # i.e. if there is a name provided in the URL
+    "Hello, #{name}!" # Putting the query parameter '?name=Danny' in the address bar after 'localhost:9393/' won't work without the 'name = ...' line
+  else # i.e. if no name is provided
+    "Hello, you!"
+  end
 
   "#{params[:name]} is #{params[:age]} years old." # This part must be string. Also, note that the string interpolation allows direct access to 'params' hash values.
 end
@@ -73,6 +73,16 @@ get '/contact' do
   "Sample address: 724 Willow Breeze Ln, Smalltown, IL 12345"
 end
 
+# write a 'great_job' route that takes a person's name as a query parameter to say "Good job, #{person's_name}!"
+  # if no query parameter, says "Good job!"
+get '/great_job' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end
 
 
 
@@ -85,16 +95,16 @@ end
   # - needing to use the hash 'params' to access data available to the server
 
 # Query parameters can be put into the URL in the browser
-  # syntax: '/?parameter_name=data_value' (think key-value pair)
+  # syntax: '?parameter_name=data_value' (think key-value pair)
   # multiple query parameters can be separated with an '&'
-    # e.g. '/?name=Danny&age=24'
+    # e.g. '?name=Danny&age=24'
 
 # Any variables put into the URL are accessible within the 'params' hash... Sinatra sure is neat!
 
 # With Sinatra, our web server basically runs methods that we are calling via HTTP instead of in a Ruby program.
 
 # In 'GET' requests, the two ways to pass information are:
-  # - query parameters that have the key-value syntax (e.g. '/?name=Danny')
+  # - query parameters that have the key-value syntax (e.g. '?name=Danny')
   # - route parameters that are written just like arguments to a method, but in the URL (e.g. '/about/Danny')
 
 # Now we can query data and allow a user to access data through a web application (how most of the Internet works)!
