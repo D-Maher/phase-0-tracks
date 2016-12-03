@@ -66,6 +66,17 @@ get '/students/:id' do
 end
 
 
+# RELEASE 0 - Add Routes
+
+# write a '/contact' route that displays an address
+get '/contact' do
+  "Sample address: 724 Willow Breeze Ln, Smalltown, IL 12345"
+end
+
+
+
+
+
 
 # GENERAL COMMENTS AND NOTES
 
