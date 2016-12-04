@@ -90,6 +90,23 @@ get '/add/:number_1/:number_2' do
   result.to_s
 end
 
+# write a '/search_by_campus' route that allows the user to search the student database for students attending a particular campus (taken as a query parameter)
+get '/search_by_campus' do
+  campus = params[:campus]
+  students = db.execute("SELECT * FROM students WHERE campus=?", [campus])  
+  response = ""
+  students.each do |student|
+    response << "ID: #{student['id']}<br>" 
+    response << "Name: #{student['name']}<br>" 
+    response << "Age: #{student['age']}<br>"
+    response << "Campus: #{student['campus']}<br><br>"
+  end
+  response.to_s
+end
+
+  
+
+
 
 
 # GENERAL COMMENTS AND NOTES
