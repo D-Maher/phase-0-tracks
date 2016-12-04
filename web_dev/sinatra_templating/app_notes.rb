@@ -9,7 +9,7 @@ db.results_as_hash = true
 
 # show students on the home page
 get '/' do # Creates our "root" page.
-  @students = db.execute("SELECT * FROM students") # The '@' lets us put the variable 'students' into our template. Another Sinatra convention.
+  @students = db.execute("SELECT * FROM students") # The '@' lets us put the variable 'students' into our ERB template. Another Sinatra convention.
   erb :home # 'erb' is a method that takes a filename (as a symbol with no file extension) as an argument. Just more Sinatra convention.
 end
 
