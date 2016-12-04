@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Party List</title>
+</head>
+<body>
+  <h1>Party List</h1>
+  <p>Here is the list of things we are bringing to the party:</p>
+    <% @groceries.each do |item| %>
+      <li><%= item['item'] %>: <%= item['quantity'] %></li>
+    <% end %>
+  <p>Click <a href="groceries/new">here</a> to add another item to the list.</p>
+</body>
+</html>

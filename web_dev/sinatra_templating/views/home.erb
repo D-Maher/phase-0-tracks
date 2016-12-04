@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>Student Management System</title>
@@ -7,10 +8,33 @@
   <h1>Student Management System</h1>
   <p>Welcome to the student management system.</p>
   <p>Click <a href="students/new">here</a> to create a new student.</p>
-  <ul>
-    <% @students.each do |student| %>
-      <li><%= student['name'] %>, <%= student['age'] %></li>
-    <% end %>
-  </ul>
+   <ul>
+     <% @students.each do |student| %>
+       <li><%= student['name'] %>, <%= student['age'] %></li>
+     <% end %>
+   </ul>
 </body>
 </html>
+
+
+
+<!-- GENERAL COMMENTS AND NOTES -->
+
+<!-- This looks like an HTML file but it has the extension '.erb'. ERB stands for "embedded Ruby". -->
+  <!-- A '.erb' file allows us to write HTML templates than can run a bit of Ruby, which lets us do neat things. -->
+
+<!-- Whenever we want to run Ruby inside an HTML template (e.g. printing a variable), we use "ice cream cone" syntax: -->
+  <!-- see lines 12-14!  -->
+    <!-- Without those "ice cream cone" indicators, we would literally see '@students' showing up in the browser. -->
+  <!-- We can think of this syntax as equivalent to string interpolation ('#{}') inside strings in Ruby. -->
+
+<!-- Note the Ruby loop on line 12: -->
+  <!-- There is no '=' in the syntax because we want the code to run in the background, since we don't need that the results of that line of Ruby printed to the screen. -->
+    <!-- If we had a '=' on that line, we would get a 'SyntaxError'. -->
+  <!-- On line 13, in contrast, we DO have the '='. -->
+
+<!-- Every code block needs an 'end' statement, even in ERB (line 14). -->
+
+<!-- On line 5 we include our stylesheet 'styles.css', just as we've done before. -->
+  <!-- No need to specify the filepath 'static/styles.css' since Sinatra knows 'static' will be the "root" directory of all CSS and JavaScript. -->
+  <!-- This only works because of what we wrote on line 5 of 'app.rb'. -->
