@@ -98,13 +98,10 @@ get '/search_by_campus' do
   students.each do |student|
     response << "ID: #{student['id']}<br>" 
     response << "Name: #{student['name']}<br>" 
-    response << "Age: #{student['age']}<br>"
-    response << "Campus: #{student['campus']}<br><br>"
+    response << "Age: #{student['age']}<br><br>"
   end
-  response.to_s
+  "Below is a list of the students attending the #{campus} campus:" + "<br><br>" + response.to_s
 end
-
-  
 
 
 
