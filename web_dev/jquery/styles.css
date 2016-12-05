@@ -1,0 +1,122 @@
+body {
+  background-color: #4078c0;
+  color: white;
+  font-family: "Avant Garde", Avantgarde, sans-serif;
+}
+
+header h1 {
+  font-family: "Papyrus";
+  font-size: 3em;
+  margin-bottom: -20px;
+
+}
+
+div#header-wrap {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: -10px;
+  margin-bottom: 0px;
+  padding: 10px;
+  padding-bottom: 35px;
+  background-image: url(http://dubleffler.com/wp-content/themes/ventura/images/headers/Blue-Bokeh.jpg);
+  background-size: 200%;
+}
+
+main {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+main section {
+  width: 95%
+}
+
+.topic h3 {
+  font-size: 1.5em;
+  text-decoration: underline;
+  margin-top: -10px;
+}
+
+.topic {
+  background-color: #17509b;
+  border-radius: 10px;
+  padding: 15px;
+  padding-top: 20px;
+  margin-bottom: 25px;
+}
+
+div#main-image-wrap {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 75px;
+}
+
+div#nav-bar {
+  width: 100%;
+  background-color: #17509b;
+  margin-bottom: 75px;
+}
+
+div#nav-bar ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%
+}
+
+div#nav-bar ul li {
+  display: inline-block;
+  text-align: center;
+  border-width: 2px;
+  border-top-width: 2px;
+  border-style: solid;
+  padding: 5px;
+  width: 50%;
+  font-size: 1.5em;
+}
+
+div#nav-bar ul li:nth-of-type(2) {
+  border-left: 2px;
+}
+
+div#nav-bar a {
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+
+div#gallery img {
+  max-width: 75%;
+}
+
+div#spur-figure img {
+  max-width: 75%;
+}
+
+a {
+  color: #4bf2b7;
+}
+
+a:visited {
+  color: #8179ea;
+}
+
+
+@media screen and (max-width: 706px) {
+
+body {
+  font-size: x-small;
+}
+
+div#header-wrap {
+  background-size: 500%;
+}
+
+}
