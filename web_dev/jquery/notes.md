@@ -17,18 +17,7 @@ jQuery Exploration Plan:
 
 What was effective?
 
-
-
-
-
-
-
-
-
-
-
-
-
+I found w3schools.com to be very helpful while familiarize myself with jQuery as it had interactive snippets that allowed me to see jQuery in action. This helped boost my understanding and allowed me to jump right in and use jQuery on my personal website (from Weeks 2 and 3). Researching and then testing turned out to be an effective strategy for me, though I found myself needing to refresh myself on CSS a bit.
 
 
 
