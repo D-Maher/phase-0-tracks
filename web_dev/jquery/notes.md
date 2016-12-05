@@ -88,15 +88,23 @@ NOTES - jQuery Basics (from w3schools.com/jquery)
     - the `on()` method attaches one or more event handlers for the selected elements
         + e.g. attaching multiple event handlers to a `<p>` element:
             ```javascript
-                $("p").on({
-                    mouseenter: function(){
-                        $(this).css("background-color", "lightgray");
-                    }, 
-                    mouseleave: function(){
-                        $(this).css("background-color", "lightblue");
-                    }, 
-                    click: function(){
-                        $(this).css("background-color", "yellow");
-                    } 
-                });
+            $("p").on({
+                mouseenter: function(){
+                    $(this).css("background-color", "lightgray");
+                }, 
+                mouseleave: function(){
+                    $(this).css("background-color", "lightblue");
+                }, 
+                click: function(){
+                    $(this).css("background-color", "yellow");
+                } 
+            });
             ```
+
+* adding jQuery to a web page
+    - the jQuery library (which comes in the form of a single JS file) must be referenced with the HTML `<script>` tag, which goes inside the `<head>` section of the document:
+        ```html
+        <head>
+            <script src="jquery-3.1.1.js"></script>
+        </head>
+        ```
