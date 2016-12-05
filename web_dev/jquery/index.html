@@ -5,6 +5,19 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="icon" href="images/plat_icon.png">
   <script src="jquery-3.1.1.js"></script>
+  <script>
+    $(document).ready(function(){
+
+      $("#hide").click(function(){
+        $("#main-image-wrap img").fadeOut();
+      });
+
+      $("#reveal").click(function(){
+        $("#main-image-wrap img").fadeIn();
+      });
+
+    });
+  </script>
 </head>
 
 <body> 
@@ -27,9 +40,11 @@
   <main>
     <div id="main-image-wrap">
       <img src="images/large-Duck-billed-Platypus-photo.jpg" alt="Photo of swimming platypus">
+      <button id="hide">Click to hide the platypus!</button>
+      <button id="reveal">Click to reveal the platypus!</button>
     </div>
 
-    <section class="topic">
+    <section class="topic" id="physical">
       <h3>Physical Characteristics</h3>
         <p>The platypus has several unique adaptations that allow for its semiaquatic lifestyle:</p>
         <ul>
